@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #faecdc;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 1rem;
+    backdrop-filter: blur(0px);
+    position: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    /* Fading effect */
+}
+
+
+nav a img {
+    height: 2.5rem;
+
+}
+
+img[src="img/Logo.png"] {
+    margin: 0 -0.5rem 0 0;
+}
+
+img[src="img/logo2.png"] {
+    margin: 0 0rem 0 0;
+    padding-top: 0.3rem;
+}
+
+.welcome {
+    background-image: url('img/welcome.png');
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 0rem 0rem 2rem;
+}
+
+.welcome .text-content{
+    max-width: 315px;
+}
+
+.welcome h1,.welcome h2, .welcome p{
+    color: #fbf2e6;
+}
+
+.welcome h1{
+    font-weight: 500;
+}
+
+.welcome h2{
+    font-weight: 300;
+}
+
+.welcome p{
+    font-size: 0.75rem;
+}
+
+.welcome a{
+    background-color: #f9e8d59a;
+    color:#fbf2e6;
+    border:1px solid #fbf2e6 ;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+
+    nav {
+        width: 100%;
+        height: 6rem;
+        padding: 1rem 1rem;
+        backdrop-filter: blur(0px);
+        position: absolute;
+        z-index: 1;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        /* Fading effect */
+    }
+
+
+    nav a img {
+        height: 2.5rem;
+
+    }
+
+    img[src="img/Logo.png"] {
+        margin: 0 -0.5rem 0 0;
+    }
+
+    img[src="img/logo2.png"] {
+        margin: 0 0rem 0 0;
+        padding-top: 0.3rem;
+    }
+
+    .welcome {
+        align-items: first baseline;
+        position: relative;
+        padding:0rem 4vw 0rem 4vw;    
+        max-height: 25rem;
+        background-position: left;
+    }
+
+    .welcome .text-content{
+        max-width: 360px;
+    }
+
+    .welcome h1{
+        margin-bottom: 0.5rem;
+    }
+
+    .welcome h2{
+        margin-bottom: 1rem;
+        line-height: 1.7rem;
+    }
+
+    .welcome p{
+        line-height: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .welcome a{
+        padding: 0.4rem 3rem;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+    }
+    .welcome a span{
+        font-size: 0.7rem;
+        margin-left: 0.3rem;
+    }
+
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 13.76%, rgba(0, 0, 0, 0) 17.51%), linear-gradient(270.35deg, rgba(0, 0, 0, 0) 0.87%, rgba(0, 0, 0, 0.0621149) 44.27%, rgba(0, 0, 0, 0.5) 53.39%), url(DALL·E 2024-06-03 20.02.png);
+box-shadow: 0px 4px 58.5px 3px rgba(0, 0, 0, 0.25);
+filter: blur(1.5px);
+border-radius: 0px 0px 150px 150px;
+ */
+
+    /* Rectangle 11 */
+
+    /* position: absolute;
+width: 1728px;
+height: 126px;
+left: 0px;
+top: 0px; */
+
+
+
+    /* DALL·E 2024-06-03 20.02 */
+
+    /* position: absolute;
+width: 1728px;
+height: 876px;
+left: 0px;
+top: -4px;
+
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 13.76%, rgba(0, 0, 0, 0) 17.51%), linear-gradient(270.35deg, rgba(0, 0, 0, 0) 0.87%, rgba(0, 0, 0, 0.0621149) 44.27%, rgba(0, 0, 0, 0.5) 53.39%), url(DALL·E 2024-06-03 20.02.png);
+box-shadow: 0px 4px 58.5px 3px rgba(0, 0, 0, 0.25);
+filter: blur(1.5px);
+border-radius: 0px 0px 150px 150px; */
+
+
+    /* Hero Section */
+
+    /* position: absolute;
+width: 806px;
+height: 594.38px;
+left: calc(50% - 806px/2 - 309px);
+top: 144px; */
+
+
+
+    /* Rectangle 11 */
+
+    /* position: absolute;
+width: 1728px;
+height: 126px;
+left: 0px;
+top: 0px; */
+
+
+
+    /* Rectangle 88 */
+
+    /* position: absolute;
+width: 74px;
+height: 74px;
+left: 78px;
+top: 26px;
+
+background: url(image.png); */
+
+
+    /* image_2024-06-03_230843-removebg-preview 1 */
+
+    /* position: absolute;
+width: 170px;
+height: 67.41px;
+left: 152px;
+top: 33px; */
+
+    /* background: url(image_2024-06-03_230843-removebg-preview.png); */
+
+
+    /* Group 334 */
+
+    /* position: absolute;
+width: 421.34px;
+height: 44.48px;
+left: 1153px;
+top: 41px; */
+
+
+}
