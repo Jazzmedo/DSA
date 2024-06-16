@@ -201,7 +201,12 @@ textarea{
 }
 
 .inputs textarea{
-    transition: 0s;
+    transition: border-color 0.5s;
+    min-height: fit-content;
+}
+
+.inputs textarea::placeholder{
+    transition:0.5s;
     min-height: fit-content;
 }
 
@@ -219,6 +224,18 @@ textarea{
 .inputs input:focus::placeholder,.inputs textarea:focus::placeholder{
     color: rgb(6, 81, 69);
     width: 100%;
+}
+
+.submitt{
+    padding:1vh 3vw;
+    background-color: #065045;
+    color: white;
+    text-transform: uppercase;
+    width: 40%;
+    margin: auto;
+    font-size: 1.3vw;
+    border-radius: 100px;
+    font-weight: 500;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -287,8 +304,8 @@ textarea{
     .iphone {
         display: inline;
         width: fit-content;
-        width: 70%;
-        margin: 5vh 20vw 3vh 20vw;
+        width: 30%;
+        margin: 2vh 20vw 3vh 20vw;
     }
 
 
@@ -324,6 +341,10 @@ textarea{
     .inputs input, .inputs textarea{
         font-size:unset;
         padding: 1vh 2vw;
+    }
+
+    .submitt{
+        font-size: 3.3vw;
     }
 
 }
