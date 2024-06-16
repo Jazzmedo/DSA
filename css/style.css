@@ -23,7 +23,7 @@ nav {
     height: 6rem;
     padding: 1rem 1rem;
     backdrop-filter: blur(0px);
-    position: fixed;
+    position: absolute;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     /* Fading effect */
 }
@@ -66,7 +66,7 @@ img[src="img/logo2.png"] {
 }
 
 .welcome {
-    background-image: url('img/Contact Us.png');
+    background-image: url('../img/Contact Us.png');
     background-size: cover;
     background-position: center top;
     width: 100%;
@@ -120,6 +120,105 @@ img[src="img/logo2.png"] {
     border: 1px solid #fbf2e6;
     text-align: center;
     text-decoration: none;
+}
+
+.icontact {
+    margin: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+}
+
+.iphone {
+    display: inline;
+    width: fit-content;
+    min-width: 40%;
+    max-width: 45%;
+}
+
+.icontact img {
+    width: 100%;
+    display: inline-block;
+}
+
+.icontent {
+    width: 40vw;
+}
+
+.icontent * {
+    color: #065045;
+}
+
+.icontent h1 {
+    font-size:3.5vw;
+}
+.icontent h2 {
+    font-size: 2vw;
+}
+
+.icontent p {
+    margin-top: 1rem;
+    font-size: 1.5vw;
+}
+
+.mess {
+    margin-top: 6vh;
+}
+
+.formm{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width:40vw;
+}
+
+textarea{
+    resize: vertical;
+    background-color: #fbf2e6;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.inputs label,inputs textarea{
+    margin-left: 1.5vw;
+    font-size: 1.3vw;
+
+}
+
+.inputs input, .inputs textarea{
+    background-color: #fbf2e6;
+    border: 0px solid rgba(6, 80, 69, 0.2);
+    border-bottom-width:2px;
+    transition: 0.5s;
+    padding: 1rem;
+    font-size: 1.3vw;
+}
+
+.inputs textarea{
+    transition: 0s;
+    min-height: fit-content;
+}
+
+.inputs input:focus, .inputs textarea:focus{
+    border: 0px solid rgb(6, 80, 69);
+    border-bottom-width:2px;
+    outline: 0;
+}
+
+.inputs input::placeholder, .inputs textarea::placeholder{
+    color: rgba(6, 81, 69, 0.2);
+    width: 100%;
+}
+
+.inputs input:focus::placeholder,.inputs textarea:focus::placeholder{
+    color: rgb(6, 81, 69);
+    width: 100%;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -179,10 +278,57 @@ img[src="img/logo2.png"] {
         /* Ensures it stays at the top right */
         margin-top: -35px;
     }
+
+    .icontact{
+        flex-direction: column;
+        margin: 0vh 0vw;
+    }
+
+    .iphone {
+        display: inline;
+        width: fit-content;
+        width: 70%;
+        margin: 5vh 20vw 3vh 20vw;
+    }
+
+
+    .icontent{
+        width:80%;
+    }
+
+    .icontent h1 {
+        font-size: 8.5vw;
+    }
+    .icontent h2 {
+        font-size: 5.5vw;
+    }
+    .icontent p {
+        margin-top: 1rem;
+        font-size: 2.5vw;
+    }
+
+    .formm{
+        width:100%
+    }
+
+    .inputs{
+        gap: 0.5vh;
+    }
+
+    .inputs label,inputs textarea{
+        margin-left: 1.5vw;
+        font-size: unset;
+    
+    }
+
+    .inputs input, .inputs textarea{
+        font-size:unset;
+        padding: 1vh 2vw;
+    }
+
 }
 
-@media (max-aspect-ratio: 1/1)
-and (min-aspect-ratio:7.8/10){
+@media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.8/10) {
     nav .navbtns {
 
         margin-top: -7vh;
