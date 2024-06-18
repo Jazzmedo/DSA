@@ -7,6 +7,27 @@
     font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #fbf2e6;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #065045;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #06473f;
+}
+
+
 html {
     scroll-behavior: smooth;
 }

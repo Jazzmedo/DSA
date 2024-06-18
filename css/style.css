@@ -7,16 +7,40 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    width: 100%;
+    background-color: #fbf2e6;
+    scrollbar-width: 8px;
+    scrollbar-color: #065045;
+    scroll-behavior: smooth;
+}
+
+/* Style the scrollbar itself (works on Chrome, Edge, and Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #fbf2e6;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #065045;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #06473f;
+}
 
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    width: 100%;
-    background-color: #fbf2e6;
-}
 
 nav {
     width: 100%;
@@ -77,7 +101,7 @@ img[src="img/logo2.png"] {
     width: 100%;
     height: fit-content;
     padding: 0rem 0rem 0rem 5rem;
-    border-bottom-left-radius:100px ;
+    border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
 
 }
@@ -89,6 +113,13 @@ img[src="img/logo2.png"] {
     gap: 5vw;
     padding-top: 10vh;
     padding-bottom: 3rem;
+}
+
+.only-content{
+    justify-content: flex-start;
+    .text-content{
+        margin-left: 2rem;
+    }
 }
 
 .mac img {
@@ -442,7 +473,7 @@ footer .cpyrght {
 
 
     nav .navbtns li a {
-        font-size: 3vw;
+        font-size: clamp(1vw,2.5vw,1rem);
     }
 
     .welcome {
@@ -466,7 +497,7 @@ footer .cpyrght {
         margin-right: 3vw;
         /* Ensures it stays at the top right */
         margin-top: unset;
-        
+
     }
 
     .icontact {
@@ -478,7 +509,7 @@ footer .cpyrght {
         display: inline;
         width: fit-content;
         width: 30%;
-        margin: 2vh 20vw 3vh 20vw;
+        margin: 5vh 20vw 3vh 20vw;
     }
 
 
@@ -571,7 +602,7 @@ footer .cpyrght {
     }
 
     footer {
-        height: 30vh;
+        height: 30rem;
     }
 
     footer .foot {
@@ -581,11 +612,11 @@ footer .cpyrght {
     footer .foot .foot1 {
         margin-right: 15vw;
     }
-    
+
     footer .foot .foot1 img {
         width: 10vw;
-    
-    }    
+
+    }
 
     .foot2 {
         margin-right: 5vw;
