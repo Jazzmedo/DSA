@@ -30,6 +30,7 @@ nav {
 
 nav a {
     display: inline-block;
+    text-decoration: none;
 }
 
 nav a img {
@@ -45,7 +46,11 @@ nav .navbtns {
     /* Adds space between each list element */
     margin-right: 3vw;
     /* Ensures it stays at the top right */
-    margin-top: -35px;
+    margin-top: -3rem;
+}
+
+nav .navbtns li {
+    display: flex;
 }
 
 nav .navbtns li a {
@@ -236,6 +241,7 @@ inputs textarea {
 }
 
 .submitt {
+    border: 0px solid red;
     padding: 1vh 3vw;
     background-color: #065045;
     color: white;
@@ -245,6 +251,11 @@ inputs textarea {
     font-size: 1.3vw;
     border-radius: 100px;
     font-weight: 500;
+    transition: 0.5s;
+}
+
+.submitt:hover {
+    background-color: #0b9c86;
 }
 
 .grid-container {
@@ -309,6 +320,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    margin-bottom: -10%;
 }
 
 footer .foot {
@@ -346,28 +358,23 @@ footer .cpyrght {
     font-size: 1.1vw;
 }
 
-.foot2{
+.foot2 {
     margin-right: 5vw;
 }
 
-.foot3{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.foot2 h3, .foot3 h3{
-    color:#d5b08e;
+.foot2 h3,
+.foot3 h3 {
+    color: #d5b08e;
     margin-bottom: 2vh;
     font-size: 1.35vw;
 }
 
-.foot2 ul{
+.foot2 ul {
     list-style-type: none;
 }
 
-.foot2 li, .foot2 li a{
+.foot2 li,
+.foot2 li a {
     color: #e4e3d7;
     font-weight: 200;
     text-decoration: none;
@@ -376,21 +383,29 @@ footer .cpyrght {
     font-size: 1.1vw;
 }
 
-.foot3 .social{
+.foot3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot3 .social {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2vw;
 }
 
-.social a{
+.social a {
     text-decoration: none;
     color: #e4e3d7;
     transition: 0.5s;
     font-size: 1.5vw;
 }
 
-.social a:hover, .foot2 li a:hover{
+.social a:hover,
+.foot2 li a:hover {
     color: #d5b08e;
 }
 
@@ -398,14 +413,12 @@ footer .cpyrght {
 
     nav {
         width: 100%;
-        height: 6rem;
+        height: 8vh;
         padding: 1rem 1rem 0 1rem;
-        backdrop-filter: blur(0px);
-        position: absolute;
-        z-index: 1;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-        /* Fading effect */
         margin-bottom: 0vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
 
@@ -442,14 +455,12 @@ footer .cpyrght {
     }
 
     nav .navbtns {
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-end;
         gap: 2vw;
         /* Adds space between each list element */
         margin-right: 3vw;
         /* Ensures it stays at the top right */
-        margin-top: -35px;
+        margin-top: unset;
+        
     }
 
     .icontact {
@@ -553,23 +564,78 @@ footer .cpyrght {
 
     }
 
-    footer{
+    footer {
         height: 30vh;
     }
 
-    footer .foot{
+    footer .foot {
         padding: 2vh 1vw
     }
+
+    footer .foot .foot1 {
+        margin-right: 15vw;
+    }
     
+    footer .foot .foot1 img {
+        width: 10vw;
+    
+    }    
+
+    .foot2 {
+        margin-right: 5vw;
+    }
+
+    .foot2 h3,
+    .foot3 h3 {
+        color: #d5b08e;
+        margin-bottom: 2vh;
+        font-size: 2vw;
+    }
+
+    .foot2 ul {
+        list-style-type: none;
+    }
+
+    .foot2 li,
+    .foot2 li a {
+        color: #e4e3d7;
+        font-weight: 200;
+        text-decoration: none;
+        margin: 1vh 0;
+        transition: 0.5s;
+        font-size: 1.6vw;
+    }
+
+    .foot3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot3 .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .social a {
+        text-decoration: none;
+        color: #e4e3d7;
+        transition: 0.5s;
+        font-size: 2vw;
+    }
+
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
     nav .navbtns {
 
-        margin-top: -7vh;
+        margin-top: unset;
     }
 
-    footer{
+    footer {
         height: 50vh;
     }
 }
