@@ -302,6 +302,13 @@ img[src="img/logo2.png"] {
     transition: height 0.5s;
 }
 
+#toggleContent {
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    overflow: hidden;
+    height: 0; /* Initial state is collapsed */
+    padding: 0 5rem; /* Adjust padding as needed */
+}
+
 .explore-more-button {
     display: inline-block;
     background-color: #f5e8d7;
@@ -511,21 +518,25 @@ img[src="img/logo2.png"] {
         margin: auto;
     }
 
-    .explore-more {
-        padding: 5rem;
-        border-radius: 10px;
-        margin: 1rem auto;
-        width: 100%;
-    }
-    
+
     .more-content{
         width: 70%;
-        margin-bottom: 7rem;
+        margin: 2vh 4vw;
     }
     
+    .background-right{
+        background-position: 150% 0%;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 0em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+
     .explore-more h2 {
         color: #2b685d;
-        font-size: 40px;
+        font-size: 6vw;
         font-weight: bold;
         margin-bottom: 10px;
         line-height: 1.2;
@@ -533,31 +544,37 @@ img[src="img/logo2.png"] {
     
     .explore-more h3 {
         color: #2b685d;
-        font-size: 24px;
-        font-weight: bold;
+        font-size: 5vw;
+        font-weight: 500;
         margin-bottom: 20px;
     }
     
     .explore-more p {
         color: #2b685d;
-        font-size: 18px;
+        font-size: 3vw;
         line-height: 1.6;
         margin-bottom: 20px;
     }
     
     .explore-more h4 {
         color: #2b685d;
-        font-size: 20px;
+        font-size: 4vw;
         font-weight: bold;
         margin-top: 30px;
         margin-bottom: 10px;
     }
-    
+
+    .explore-more-button {
+        background-color: #f5e8d7;
+        color: #2b685d;
+        padding: 1vh 4vw;
+        border-radius: 25px;
+        font-size: 3vw;
+        margin-top: -1rem;
+    }
+
+    #toggleContent {
+        padding: 0 5vw; /* Adjust padding as needed */
+    }
 }
 
-#toggleContent {
-    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
-    overflow: hidden;
-    height: 0; /* Initial state is collapsed */
-    padding: 0 5rem; /* Adjust padding as needed */
-}
