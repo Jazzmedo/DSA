@@ -630,10 +630,6 @@ footer .cpyrght {
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
-    nav .navbtns {
-
-        margin-top: unset;
-    }
 
     footer {
         height: 50vh;

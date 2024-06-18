@@ -23,14 +23,17 @@ nav {
     backdrop-filter: blur(0px);
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    /* Fading effect */
 }
 
 nav a {
     display: inline-block;
+    text-decoration: none;
 }
 
 nav a img {
     height: 2.5rem;
+
 }
 
 nav .navbtns {
@@ -38,8 +41,14 @@ nav .navbtns {
     display: flex;
     justify-content: flex-end;
     gap: 2vw;
+    /* Adds space between each list element */
     margin-right: 3vw;
-    margin-top: -35px;
+    /* Ensures it stays at the top right */
+    margin-top: -3rem;
+}
+
+nav .navbtns li {
+    display: flex;
 }
 
 nav .navbtns li a {
@@ -60,14 +69,14 @@ img[src="img/logo2.png"] {
 }
 
 .welcome {
-    background-image: url("../img/contactus.png");
+    background-image: url('../img/mainwelcome.jpg');
     background-size: cover;
     background-position: center top;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: fit-content;
+    padding: 0rem 0rem 0rem 5rem;
+    border-bottom-right-radius:100px;
+    border-bottom-left-radius: 100px;
 }
 
 .inners {
@@ -75,36 +84,62 @@ img[src="img/logo2.png"] {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    padding: 0 5rem;
+    padding-top: 10vh
 }
 
-.text-content {
-    padding-left: 0;
-   
-    max-width: 800px;
+.only-content{
+    justify-content: flex-start;
+    .text-content{
+        margin-left: 2rem;
+    }
+}
+
+.mac img {
+    width: 35vw;
+}
+
+
+.welcome .text-content {
+    display: inline-block;
+    width: 40vw;
     text-align: left;
-    color: #fbf2e6;
-    margin-left: -250px;
-
-
 }
 
-.text-content h1 {
-    font-weight: 600;
-    font-size: 4.2vw;
-    margin-bottom: 1rem;
+.welcome h1,
+.welcome h2,
+.welcome p {
+    color: #fbf2e6;
+}
+
+.welcome h1 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 3.2vw;
 }
 
 .text-content h3 {
-
+    color: #fbf2e6;
     font-weight: 300;
     font-size: 3.2vw;
-    margin-bottom: 1rem;
 }
 
-.text-content p {
+.welcome h2 {
+    font-weight: 300;
+}
+
+.welcome p {
+    width: 100%;
     font-size: 1.3vw;
     margin-bottom: 2rem;
+}
+
+.welcome a {
+    background-color: #f9e8d59a;
+    color: #fbf2e6;
+    border: 1px solid #fbf2e6;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 4rem;
 }
 
 .contact-button {
@@ -160,41 +195,41 @@ img[src="img/logo2.png"] {
 }
 
 .explore-more {
-    background-color: #f5e8d7; 
+    background-color: #f5e8d7;
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
-    width: 100%; 
+    width: 100%;
     height: 1040px;
     font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .explore-more h2 {
     color: #2b685d;
-    font-size: 40px; 
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
-    line-height:1.2 ;
+    line-height: 1.2;
 }
 
 .explore-more h3 {
-    color: #2b685d; 
-    font-size: 24px; 
+    color: #2b685d;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .explore-more p {
-    color: #2b685d; 
-    font-size: 18px; 
+    color: #2b685d;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .explore-more h4 {
-    color: #2b685d; 
-    font-size: 20px; 
+    color: #2b685d;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -202,75 +237,78 @@ img[src="img/logo2.png"] {
 
 .explore-more-button {
     display: inline-block;
-    background-color: #f5e8d7; 
-    color: #2b685d; 
+    background-color: #f5e8d7;
+    color: #2b685d;
     padding: 10px 20px;
-    border: 2px solid #2b685d; 
-    border-radius: 25px; 
+    border: 2px solid #2b685d;
+    border-radius: 25px;
     text-align: center;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .explore-more-button:hover {
-    background-color: #2b685d; 
-    color: #ffffff; 
+    background-color: #2b685d;
+    color: #ffffff;
 }
+
 .explore-more-button-container {
     display: flex;
     justify-content: center;
-   
+
     margin-top: 20px;
 }
 
 .explore-today-news {
     display: flex;
-    padding: 40px; 
-    background-color: #f8f1e9; 
-    height: 600px; 
+    padding: 40px;
+    background-color: #f8f1e9;
+    height: 600px;
 }
 
 .news-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px; 
-    margin-right: 40px; 
+    grid-gap: 20px;
+    margin-right: 40px;
 }
 
 .news-image {
-    background-color: #d3d3d3; 
+    background-color: #d3d3d3;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px; 
+    height: 200px;
     font-weight: bold;
-    font-size: 24px; 
+    font-size: 24px;
     border-radius: 20px;
 }
 
 .news-content {
-    max-width: 600px; 
+    max-width: 600px;
 }
 
 .news-content h2 {
-    color: #2c5f2d; 
+    color: #2c5f2d;
     font-size: 32px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .news-content h3 {
-    color: #2c5f2d; 
+    color: #2c5f2d;
     font-size: 28px;
     margin-bottom: 20px;
-    line-height: 0; 
+    line-height: 0;
 }
 
 .news-content p {
-    color: #333; 
-    font-size: 20px; 
-    line-height: 1.8; 
+    color: #333;
+    font-size: 20px;
+    line-height: 1.8;
 }
+
+@media (max-aspect-ratio: 1/1) {}
