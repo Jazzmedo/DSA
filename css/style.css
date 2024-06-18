@@ -71,12 +71,15 @@ img[src="img/logo2.png"] {
 }
 
 .welcome {
-    background-image: url('../img/Contact Us.png');
+    background-image: url('../img/contactUswelcome.jpg');
     background-size: cover;
     background-position: center top;
     width: 100%;
     height: fit-content;
     padding: 0rem 0rem 0rem 5rem;
+    border-bottom-left-radius:100px ;
+    border-bottom-right-radius: 100px;
+
 }
 
 .inners {
@@ -84,7 +87,8 @@ img[src="img/logo2.png"] {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    padding-top: 10vh
+    padding-top: 10vh;
+    padding-bottom: 3rem;
 }
 
 .mac img {
@@ -444,6 +448,8 @@ footer .cpyrght {
     .welcome {
         height: fit-content;
         padding: 0;
+        border-bottom-left-radius: 13vw;
+        border-bottom-right-radius: 13vw;
     }
 
     .inners {
