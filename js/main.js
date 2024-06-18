@@ -1,12 +1,10 @@
-const inputs = document.querySelectorAll(".input");
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById('toggleButton');
+  const toggleContent = document.getElementById('toggleContent');
 
-console.log(inputs)
-
-function focusFunx() {
-  let parent = this.parentNode.parentNode;
-  parent.classList.add("focus");
-}
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunx);
-  console.log(input)
+  toggleButton.addEventListener('click', function() {
+      const isOpen = toggleButton.textContent.includes("LESS");
+      toggleButton.textContent = isOpen ? "EXPLORE MORE" : "EXPLORE LESS";
+      toggleContent.style.height = isOpen ? "0" : `${toggleContent.scrollHeight}px`;
+  });
 });

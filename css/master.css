@@ -34,7 +34,7 @@ html {
 
 body {
     width: 100%;
-    background-color: #f5e8d7;
+    background-color: #fbf2e6;
 }
 
 nav {
@@ -154,24 +154,15 @@ img[src="img/logo2.png"] {
     margin-bottom: 2rem;
 }
 
-.welcome a {
+.contact-button {
     background-color: #f9e8d59a;
     color: #fbf2e6;
     border: 1px solid #fbf2e6;
     text-align: center;
     text-decoration: none;
     margin-bottom: 4rem;
-}
-
-.contact-button {
-
     display: inline-block;
-    background-color: #f9e8d59a;
-    color: #fbf2e6;
-    border: 1px solid #fbf2e6;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
     border-radius: 25px;
     font-size: 1.3vw;
     transition: background-color 0.3s ease;
@@ -184,43 +175,59 @@ img[src="img/logo2.png"] {
 
 .welcome-section {
     height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8vh 1rem;
+    gap: 5vw;
+    background-color: #fbf2e6;
+}
+
+.image-container{
     background-image: url("../img/bglogo1.png");
-    background-size: 35%;
+    background-size: 36vw;
     background-repeat: no-repeat;
     background-position: center left;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 3rem;
-    background-color: #f5e8d7;
-}
-
-.image-container{
-
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    width: 50%;
-    height: auto;
+    width: fit-content;
+    height: fit-content;
 }
 
 .image-container img {
-    max-width: 50%;
-    height: 70%;
+    width: 40vw;
+    height: 25vw;
     border-radius: 10px;
-    margin-right: 10vw;
+    padding-left: 15vw;
 }
 
 .text-container {
     color: #2b685d;
     text-align: left;
+    width: 40%;
+    padding-right: 5%;
 }
 
+.text-container h1{
+    font-size: 3.5vw;
+}
 
+.text-container h2{
+    font-size: 3.5vw;
+    font-weight: 500;
+}
 
 .text-container p {
 
     margin: 10px 0;
+}
+
+.text-container div{
+    width: 50%;
+    height: 2px;
+    margin-top: 4rem;
+    background-color: #065045;
 }
 
 .text-container .text-container-p {
@@ -230,13 +237,30 @@ img[src="img/logo2.png"] {
 
 .explore-more {
     background-color: #f5e8d7;
-    padding: 20px;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 1rem auto;
     width: 100%;
-    height: 1040px;
+    height: fit-content;
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.background-right{
+    background-image: url("../img/bglogo1.png");
+    background-position: 150% 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.more-content{
+    width: 60%;
+    margin-left: 10rem;
 }
 
 .explore-more h2 {
@@ -256,9 +280,13 @@ img[src="img/logo2.png"] {
 
 .explore-more p {
     color: #2b685d;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+.explore-more .lastp{
+    margin-bottom: 0;
 }
 
 .explore-more h4 {
@@ -267,6 +295,11 @@ img[src="img/logo2.png"] {
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 10px;
+}
+
+.other-content{
+    padding: 0 5rem 3rem;
+    transition: height 0.5s;
 }
 
 .explore-more-button {
@@ -280,7 +313,7 @@ img[src="img/logo2.png"] {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: -2rem;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -293,8 +326,6 @@ img[src="img/logo2.png"] {
 .explore-more-button-container {
     display: flex;
     justify-content: center;
-
-    margin-top: 20px;
 }
 
 .explore-today-news {
@@ -302,6 +333,10 @@ img[src="img/logo2.png"] {
     padding: 40px;
     background-color: #f8f1e9;
     height: 600px;
+}
+
+.margnonly{
+    height: 2rem;
 }
 
 .news-grid {
@@ -410,37 +445,119 @@ img[src="img/logo2.png"] {
     }
 
     .welcome h1,.welcome h3{
-        font-size: 5.5vw;
+        font-size: 6.5vw;
     }
     
     .welcome p{
-        font-size: 2.4vw;
+        font-size: 2.8vw;
         margin-bottom: 1rem;
     }
 
     .welcome a{
-        margin-bottom: 3vh;
+        margin-bottom: 2vh;
     }
 
     .welcome-section{
         flex-direction: column;
+        margin: 5vh 1vw;
+        gap:2vh;
+        justify-content: flex-start;
+        align-items:center;
+        height: fit-content;
     }
+
+    .contact-button {
+        margin-bottom: 4rem;
+        padding: 1vh 7vw;
+        border-radius: 25px;
+        font-size: 2.6vw;
+    }
+    
 
     .image-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background-size: 57vw;
     }
-
     .image-container img {
-        margin:2vh 3vw;
-
+        width: 65vw;
+        height: 40vw;
+        border-radius: 10px;
+        padding-left: 25vw;
     }
+    
 
     .text-container{
-        margin-left: 0;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
         *{
             text-align: center;
         }
     }
+
+    .text-container h1{
+        font-size: 6vw;
+    }
+
+    .text-container h2{
+        font-size: 6vw;
+    }
+
+    .text-container p{
+        font-size: 3vw;
+    }
+
+    .text-container div {
+        margin: auto;
+    }
+
+    .explore-more {
+        padding: 5rem;
+        border-radius: 10px;
+        margin: 1rem auto;
+        width: 100%;
+    }
+    
+    .more-content{
+        width: 70%;
+        margin-bottom: 7rem;
+    }
+    
+    .explore-more h2 {
+        color: #2b685d;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    
+    .explore-more h3 {
+        color: #2b685d;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .explore-more p {
+        color: #2b685d;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .explore-more h4 {
+        color: #2b685d;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+#toggleContent {
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    overflow: hidden;
+    height: 0; /* Initial state is collapsed */
+    padding: 0 5rem; /* Adjust padding as needed */
 }
