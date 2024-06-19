@@ -100,6 +100,10 @@ img[src="img/logo2.png"] {
     border-bottom-left-radius: 100px;
 }
 
+.welcome.A {
+    height: 600px;
+}
+
 .inners {
     display: flex;
     justify-content: center;
@@ -115,6 +119,11 @@ img[src="img/logo2.png"] {
         margin-left: 2rem;
     }
 }
+
+.text-content.A {
+    margin: 100px;
+}
+
 
 .mac img {
     width: 35vw;
@@ -439,6 +448,11 @@ img[src="img/logo2.png"] {
     height: 15vw;
 }
 
+.grid-item.Afour {
+    width: 250px;
+    height: 250px;
+}
+
 .forcetwo {
     gap: 5vw;
 }
@@ -549,7 +563,7 @@ img[src="img/logo2.png"] {
         font-weight: 600;
     }
 
-    h4{
+    h4 {
         font-size: 1.5vw;
         font-weight: 400;
     }
@@ -557,7 +571,7 @@ img[src="img/logo2.png"] {
     div {
         width: 25%;
         height: 2px;
-        margin: 2rem  auto 0;
+        margin: 2rem auto 0;
         background-color: #065045;
         display: flex;
         align-items: center;
@@ -661,6 +675,126 @@ footer .cpyrght {
     color: #d5b08e;
 }
 
+.section-header h2 {
+    text-align: center;
+    color: #065045;
+    line-height: 0;
+    margin: 50px;
+padding: 20px 0px;
+    font-size: 30px;
+}
+
+.section-header h4 {
+    text-align: center;
+    color: #000;
+    line-height: 0;
+    font-size: 20px;
+    margin: -30px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.grid-container {
+    width: 60%;
+}
+
+.timeline {
+    width: 35%;
+    padding-left: 20px;
+    position: relative;
+    color: #065045;
+}
+
+
+
+.timeline h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.timeline p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    position: relative;
+}
+
+.timeline-marker {
+    width: 20px; 
+    height: 20px;
+    background-color: #065045; 
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    margin-left: 40px;
+    color: #065045;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    
+}
+.mission-section {
+
+    margin-left: 50px;
+}
+.timeline-section {
+  
+    margin-left: 80px;
+}
+
+.mission-section {
+    color: #065045;
+    margin-right: 40px;
+}
+.mission-timeline-content-wrapper {
+    display: flex;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+}
+
+.mission-section, .timeline-section {
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    flex: 1;
+    margin: 10px;
+}
+
+.mission-section,
+.timeline-section,
+.content-wrapper {
+    flex: 1;
+    margin: 23px;
+}
+.mission-section p {
+    font-size: 22px;
+}
 
 @media (max-aspect-ratio: 1/1) {
 
