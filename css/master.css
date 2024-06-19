@@ -1084,6 +1084,22 @@ padding: 20px 0px;
         transition: opacity 0.7s ease;
     }
 
+    .charstxt {
+        h3 {
+            font-size: 5vw;
+        }
+    
+        h4{
+            font-size: 3vw;
+        }
+    
+        div {
+            width: 25%;
+            height: 3px;
+            margin: 2vh  auto 0;
+        }
+    }
+
     footer .foot {
         padding: 2vh 1vw
     }
