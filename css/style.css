@@ -162,19 +162,19 @@ img[src="img/logo2.png"] {
     text-decoration: none;
 }
 
+.iphone {
+    display: inline;
+    width: fit-content;
+    min-width: 40%;
+    max-width: 45%;
+}
+
 .icontact {
     margin: 10rem 10rem 6rem 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15vw;
-}
-
-.iphone {
-    display: inline;
-    width: fit-content;
-    min-width: 40%;
-    max-width: 45%;
 }
 
 .icontact img {

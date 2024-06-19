@@ -337,9 +337,12 @@ img[src="img/logo2.png"] {
 
 .explore-today-news {
     display: flex;
-    padding: 40px;
+    margin: 10rem 10rem 6rem;
     background-color: #f8f1e9;
-    height: 600px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
 }
 
 .margnonly{
@@ -386,6 +389,93 @@ img[src="img/logo2.png"] {
     font-size: 20px;
     line-height: 1.8;
 }
+
+.grid-container {
+    max-width: 50%;
+    display: flex;
+    gap: 2vw;
+
+}
+
+.container-one {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.5vw;
+    margin-left: 4.5vw;
+}
+
+.container-two {
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+.grid-item img {
+    border-radius: 5px;
+}
+
+.pone {
+    width: 10.2vw;
+    height: 14.4vw;
+}
+
+.ptwo {
+    width: 10.2vw;
+    height: 6.9vw;
+}
+
+.pthree {
+    width: 9.3vw;
+    height: 9vw;
+}
+
+.pfour {
+    width: 9.3vw;
+    height: 15vw;
+}
+
+.forcetwo {
+    gap: 5vw;
+}
+
+.icontact {
+    margin: 5rem 0rem 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.icontact img {
+    width: 100%;
+    display: inline-block;
+}
+
+.icontent {
+    width: 40vw;
+}
+
+.icontent * {
+    color: #065045;
+}
+
+.icontent h1 {
+    font-size: 2.5vw;
+}
+
+.icontent h2 {
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.icontent p {
+    margin-top: 1rem;
+    font-size: 1.8vw;
+}
+
 
 @media (max-aspect-ratio: 1/1) {
     
@@ -575,6 +665,29 @@ img[src="img/logo2.png"] {
 
     #toggleContent {
         padding: 0 5vw; /* Adjust padding as needed */
+    }
+
+    .icontent{
+        width: 60vw;
+    }
+
+    .icontact {
+        margin: 4vh 0rem;
+        gap: 7vw;
+    }
+
+    .icontent h1 {
+        font-size: 3.5vw;
+    }
+    
+    .icontent h2 {
+        font-size: 3vw;
+        font-weight: 500;
+    }
+    
+    .icontent p {
+        margin-top: 0.6vh;
+        font-size: 2.3vw;
     }
 }
 
