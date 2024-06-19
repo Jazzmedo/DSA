@@ -30,6 +30,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -448,9 +449,42 @@ img[src="img/logo2.png"] {
     height: 15vw;
 }
 
-.grid-item.Afour {
-    width: 250px;
-    height: 250px;
+.grid-item.Aone img {
+    border-radius: 43px;
+    margin: -3px;
+}
+
+.grid-item.Atwo img {
+    border-radius: 43px;
+    margin: -3px;
+}
+
+.teamtxt {
+    text-align: center;
+
+    * {
+        color: #065045;
+    }
+
+    h3 {
+        font-size: 2vw;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 1.2vw;
+        font-weight: 400;
+    }
+
+    div {
+        width: 25%;
+        height: 2px;
+        margin: 2rem auto 0;
+        background-color: #065045;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .forcetwo {
@@ -527,9 +561,13 @@ img[src="img/logo2.png"] {
     background-image: url('../img/contactUswelcome.jpg');
 }
 
+
+
 .three {
     background-image: url('../img/contactUswelcome.jpg');
 }
+
+
 
 .four {
     background-image: url('../img/contactUswelcome.jpg');
@@ -538,6 +576,8 @@ img[src="img/logo2.png"] {
 .five {
     background-image: url('../img/contactUswelcome.jpg');
 }
+
+
 
 .con.clicked {
     flex: 5;
@@ -680,7 +720,7 @@ footer .cpyrght {
     color: #065045;
     line-height: 0;
     margin: 50px;
-padding: 20px 0px;
+    padding: 20px 0px;
     font-size: 30px;
 }
 
@@ -691,10 +731,11 @@ padding: 20px 0px;
     font-size: 20px;
     margin: -30px;
 }
+
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-   
+
 }
 
 .grid-container {
@@ -728,9 +769,9 @@ padding: 20px 0px;
 }
 
 .timeline-marker {
-    width: 20px; 
+    width: 20px;
     height: 20px;
-    background-color: #065045; 
+    background-color: #065045;
     border-radius: 50%;
     position: absolute;
     left: 0;
@@ -751,14 +792,16 @@ padding: 20px 0px;
 
 .timeline-content p {
     margin: 5px 0;
-    
+
 }
+
 .mission-section {
 
     margin-left: 50px;
 }
+
 .timeline-section {
-  
+
     margin-left: 80px;
 }
 
@@ -766,6 +809,7 @@ padding: 20px 0px;
     color: #065045;
     margin-right: 40px;
 }
+
 .mission-timeline-content-wrapper {
     display: flex;
 }
@@ -777,7 +821,8 @@ padding: 20px 0px;
     margin: 10px;
 }
 
-.mission-section, .timeline-section {
+.mission-section,
+.timeline-section {
     margin-bottom: 20px;
 }
 
@@ -792,6 +837,7 @@ padding: 20px 0px;
     flex: 1;
     margin: 23px;
 }
+
 .mission-section p {
     font-size: 22px;
 }
