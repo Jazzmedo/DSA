@@ -7,16 +7,40 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    width: 100%;
+    background-color: #fbf2e6;
+    scrollbar-width: 8px;
+    scrollbar-color: #065045;
+    scroll-behavior: smooth;
+}
+
+/* Style the scrollbar itself (works on Chrome, Edge, and Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #fbf2e6;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #065045;
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #06473f;
+}
 
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    width: 100%;
-    background-color: #fbf2e6;
-}
 
 nav {
     width: 100%;
@@ -30,6 +54,7 @@ nav {
 
 nav a {
     display: inline-block;
+    text-decoration: none;
 }
 
 nav a img {
@@ -45,7 +70,11 @@ nav .navbtns {
     /* Adds space between each list element */
     margin-right: 3vw;
     /* Ensures it stays at the top right */
-    margin-top: -35px;
+    margin-top: -3rem;
+}
+
+nav .navbtns li {
+    display: flex;
 }
 
 nav .navbtns li a {
@@ -66,12 +95,15 @@ img[src="img/logo2.png"] {
 }
 
 .welcome {
-    background-image: url('../img/Contact Us.png');
+    background-image: url('../img/contactUswelcome.jpg');
     background-size: cover;
     background-position: center top;
     width: 100%;
     height: fit-content;
     padding: 0rem 0rem 0rem 5rem;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
 }
 
 .inners {
@@ -79,7 +111,15 @@ img[src="img/logo2.png"] {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    padding-top: 10vh
+    padding-top: 10vh;
+    padding-bottom: 3rem;
+}
+
+.only-content{
+    justify-content: flex-start;
+    .text-content{
+        margin-left: 2rem;
+    }
 }
 
 .mac img {
@@ -122,19 +162,19 @@ img[src="img/logo2.png"] {
     text-decoration: none;
 }
 
+.iphone {
+    display: inline;
+    width: fit-content;
+    min-width: 40%;
+    max-width: 45%;
+}
+
 .icontact {
     margin: 10rem 10rem 6rem 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15vw;
-}
-
-.iphone {
-    display: inline;
-    width: fit-content;
-    min-width: 40%;
-    max-width: 45%;
 }
 
 .icontact img {
@@ -236,6 +276,7 @@ inputs textarea {
 }
 
 .submitt {
+    border: 0px solid red;
     padding: 1vh 3vw;
     background-color: #065045;
     color: white;
@@ -245,6 +286,11 @@ inputs textarea {
     font-size: 1.3vw;
     border-radius: 100px;
     font-weight: 500;
+    transition: 0.5s;
+}
+
+.submitt:hover {
+    background-color: #0b9c86;
 }
 
 .grid-container {
@@ -309,6 +355,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    margin-bottom: -10%;
 }
 
 footer .foot {
@@ -338,7 +385,7 @@ footer .cpyrght {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5%;
+    height: 2.3rem;
     background-color: #edd9c1;
     color: black;
     width: 100%;
@@ -346,28 +393,23 @@ footer .cpyrght {
     font-size: 1.1vw;
 }
 
-.foot2{
+.foot2 {
     margin-right: 5vw;
 }
 
-.foot3{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.foot2 h3, .foot3 h3{
-    color:#d5b08e;
+.foot2 h3,
+.foot3 h3 {
+    color: #d5b08e;
     margin-bottom: 2vh;
     font-size: 1.35vw;
 }
 
-.foot2 ul{
+.foot2 ul {
     list-style-type: none;
 }
 
-.foot2 li, .foot2 li a{
+.foot2 li,
+.foot2 li a {
     color: #e4e3d7;
     font-weight: 200;
     text-decoration: none;
@@ -376,21 +418,29 @@ footer .cpyrght {
     font-size: 1.1vw;
 }
 
-.foot3 .social{
+.foot3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot3 .social {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2vw;
 }
 
-.social a{
+.social a {
     text-decoration: none;
     color: #e4e3d7;
     transition: 0.5s;
     font-size: 1.5vw;
 }
 
-.social a:hover, .foot2 li a:hover{
+.social a:hover,
+.foot2 li a:hover {
     color: #d5b08e;
 }
 
@@ -398,20 +448,28 @@ footer .cpyrght {
 
     nav {
         width: 100%;
-        height: 6rem;
+        height: fit-content;
         padding: 1rem 1rem 0 1rem;
-        backdrop-filter: blur(0px);
-        position: absolute;
-        z-index: 1;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-        /* Fading effect */
         margin-bottom: 0vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
 
     nav a img {
-        height: 7vw;
+        height: 5vw;
 
+    }
+
+    nav .navbtns li a {
+        font-size: clamp(1vw,2.5vw,1rem);
+    }
+
+    nav .navbtns {
+        gap: 2vw;
+        margin-right: 3vw;
+        margin-top: unset;
     }
 
     img[src="img/Logo.png"] {
@@ -423,14 +481,11 @@ footer .cpyrght {
         padding-top: 0.3rem;
     }
 
-
-    nav .navbtns li a {
-        font-size: 3vw;
-    }
-
     .welcome {
         height: fit-content;
         padding: 0;
+        border-bottom-left-radius: 13vw;
+        border-bottom-right-radius: 13vw;
     }
 
     .inners {
@@ -439,17 +494,6 @@ footer .cpyrght {
         align-items: center;
         gap: 3vw;
         padding: 7vh 0 7vh 0;
-    }
-
-    nav .navbtns {
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-end;
-        gap: 2vw;
-        /* Adds space between each list element */
-        margin-right: 3vw;
-        /* Ensures it stays at the top right */
-        margin-top: -35px;
     }
 
     .icontact {
@@ -461,7 +505,7 @@ footer .cpyrght {
         display: inline;
         width: fit-content;
         width: 30%;
-        margin: 2vh 20vw 3vh 20vw;
+        margin: 5vh 20vw 3vh 20vw;
     }
 
 
@@ -553,23 +597,74 @@ footer .cpyrght {
 
     }
 
-    footer{
-        height: 30vh;
+    footer {
+        height: 30rem;
     }
 
-    footer .foot{
+    footer .foot {
         padding: 2vh 1vw
     }
-    
+
+    footer .foot .foot1 {
+        margin-right: 15vw;
+    }
+
+    footer .foot .foot1 img {
+        width: 10vw;
+
+    }
+
+    .foot2 {
+        margin-right: 5vw;
+    }
+
+    .foot2 h3,
+    .foot3 h3 {
+        color: #d5b08e;
+        margin-bottom: 2vh;
+        font-size: 2vw;
+    }
+
+    .foot2 ul {
+        list-style-type: none;
+    }
+
+    .foot2 li,
+    .foot2 li a {
+        color: #e4e3d7;
+        font-weight: 200;
+        text-decoration: none;
+        margin: 1vh 0;
+        transition: 0.5s;
+        font-size: 1.6vw;
+    }
+
+    .foot3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot3 .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .social a {
+        text-decoration: none;
+        color: #e4e3d7;
+        transition: 0.5s;
+        font-size: 2vw;
+    }
+
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
-    nav .navbtns {
 
-        margin-top: -7vh;
-    }
-
-    footer{
+    footer {
         height: 50vh;
     }
 }

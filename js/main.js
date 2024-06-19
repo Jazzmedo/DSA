@@ -1,12 +1,24 @@
-const inputs = document.querySelectorAll(".input");
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById('toggleButton');
+  const toggleContent = document.getElementById('toggleContent');
 
-console.log(inputs)
+  toggleButton.addEventListener('click', function() {
+      const isOpen = toggleButton.textContent.includes("LESS");
+      toggleButton.textContent = isOpen ? "EXPLORE MORE" : "EXPLORE LESS";
+      toggleContent.style.height = isOpen ? "0" : `${toggleContent.scrollHeight}px`;
+  });
+});
 
-function focusFunx() {
-  let parent = this.parentNode.parentNode;
-  parent.classList.add("focus");
+var divs = document.querySelectorAll('.con');
+
+function handleClick(event) {
+    divs.forEach(function (div) {
+        div.classList.remove('clicked');
+    });
+
+    event.target.classList.add('clicked');
 }
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunx);
-  console.log(input)
+
+divs.forEach(function (div) {
+    div.addEventListener('click', handleClick);
 });
