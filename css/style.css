@@ -85,13 +85,13 @@ nav .navbtns li a {
     text-transform: uppercase;
 }
 
-img[src="img/Logo.png"] {
+img[src="../img/Logo.png"] {
     margin: 0 -0.5rem 0 0;
 }
 
-img[src="img/logo2.png"] {
+img[src="../img/logo2.png"] {
     margin: 0 0rem 0 0;
-    padding-top: 0.3rem;
+    padding-top: 0.4rem;
 }
 
 .welcome {
