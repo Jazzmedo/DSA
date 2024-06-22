@@ -101,7 +101,7 @@ footer .cpyrght {
 @media (max-aspect-ratio: 1/1) {
 
     footer {
-        height: 30rem;
+        height: 35vh;
     }
 
     footer .foot {

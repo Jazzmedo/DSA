@@ -170,7 +170,7 @@ img[src="../img/logo2.png"] {
 }
 
 .icontact {
-    margin: 10rem 10rem 6rem 10rem;
+    margin: 10rem 10vw 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,7 +351,7 @@ footer {
     background-image: url("../img/bglogo.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70%;
+    background-size: 70% ;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
