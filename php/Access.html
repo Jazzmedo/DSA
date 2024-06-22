@@ -41,17 +41,16 @@
             <p>If There Something Wrong To
                 Receive Your Email And
                 Password, Please Click "Resend"</p>
-            <button onclick="sendCredentials()" class="submitt">RECEIVE</button>
-            <button class="resend" onclick="resendCredentials()"><i class="fas fa-sync"></i>RESEND</button>
+            <button onclick="" class="submitt">RECIEVE</button>
+            <button class="resend" onclick=""><i class="fas fa-sync"></i>RESEND</button>
+
         </div>
-        <form method="get" action="Control.html">
+        <form method="get">
             <img src="../img/Login-rafiki.png">
             <label for="Username">Username</label>
-            <input class="user txtinput" placeholder="Hakiem's Travels" type="text" name="Username">
+            <input class="user txtinput" placeholder="Hakiem's Traverls" type="username" name="Username">
             <label for="Password">Password</label>
-            <input class="pass txtinput" placeholder="Hakiem's Travels" type="password" name="Password">
-            <label for="OTP">OTP Verification</label>
-            <input class="otp txtinput" placeholder="Enter OTP" type="text" name="OTP">
+            <input class="pass txtinput" placeholder="Hakiem's Traverls" type="password" name="Password">
             <input class="submitt forcedsub" type="submit" name="Submit" value="Submit&nbsp; &#8594;" id="">
         </form>
     </div>
@@ -91,27 +90,6 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
-    <script>
-        function sendCredentials() {
-            fetch('send_credentials.php', {
-                method: 'POST'
-            }).then(response => response.text()).then(data => {
-                alert('Credentials sent!');
-            }).catch(error => {
-                console.error('Error:', error);
-            });
-        }
-
-        function resendCredentials() {
-            fetch('resend_credentials.php', {
-                method: 'POST'
-            }).then(response => response.text()).then(data => {
-                alert('Credentials resent!');
-            }).catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    </script>
 </body>
 
 </html>
