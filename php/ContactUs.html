@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSA | Contact Us</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../img/Logo.ico">
@@ -12,12 +12,12 @@
 
 <body>
     <nav>
-        <a href="index.html">
+        <a href="WelcomePage.html">
             <img src="../img/Logo.png" alt="">
             <img src="../img/logo2.png" alt="">
         </a>
         <ul class="navbtns">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="WelcomePage.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
@@ -40,25 +40,29 @@
             <p>A Journey Of Courage, Healing, And Discovery.
                 Dive Into The Rich Tapestry Of Arabian
                 Culture Through Our Animated Series.</p>
-            <form class="formm" action="get">
-                <div class="inputs">
-                    <label for="name">Name &nbsp;<i class="fa-solid fa-user"></i></label>
-                    <input type="name" placeholder="Enter Your Name">
-                </div>
-                <div class="inputs">
-                    <label for="email">Email &nbsp;<i class="fa-solid fa-envelope"></i></label>
-                    <input type="name" placeholder="Enter Your Email">
-                </div>
-                <div class="inputs">
-                    <label for="phone">Phone &nbsp;<i class="fa-solid fa-phone"></i></label>
-                    <input type="phone" placeholder="Enter Your Phone">
-                </div>
-                <div class="inputs">
-                    <label for="message">Messages &nbsp;<i class="fa-brands fa-telegram"></i></label>
-                    <textarea type="message" placeholder="Enter Your Message"></textarea>
-                </div>
-                <input class="submitt" type="submit" name="Submit" value="Submit&nbsp; &#8594;" id="">
-            </form>
+                
+                <form action="https://formspree.io/f/mvgppkdd" method="POST">
+                    <div class="formm">
+                        <div class="inputs">
+                            <label for="name">Name <i class="fa-solid fa-user"></i></label>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email <i class="fa-solid fa-envelope"></i></label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Phone <i class="fa-solid fa-phone"></i></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="message">Message <i class="fa-brands fa-telegram"></i></label>
+                            <textarea id="message" name="message" placeholder="Enter Your Message" required></textarea>
+                        </div>
+                        <input class="submitt" type="submit" value="Submit">
+                    </div>
+                </form>    
+                        
         </div>
     </div>
     <div class="icontact forcetwo">
