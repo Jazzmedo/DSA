@@ -59,7 +59,11 @@ nav a {
 
 nav a img {
     height: 2.5rem;
+    margin-right: -0.5rem;
+}
 
+img[src="../img/logo2.png"]{
+    padding-top: 0.4rem;
 }
 
 nav .navbtns {

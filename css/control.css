@@ -1,0 +1,39 @@
+/* Grid container */
+.left-sidebar-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr 300px; /* Adjust sizes as needed */
+    grid-template-areas: "left-sidebar main-content right-sidebar";
+    height: 100vh; /* Full viewport height */
+}
+
+/* General column padding */
+.left-sidebar-grid > * {
+    padding: 1rem;
+}
+
+/* Assign columns to grid areas */
+.left-sidebar-grid > .left-sidebar {
+    grid-area: left-sidebar;
+    background: #2c3e50; /* Dark sidebar color */
+}
+
+.left-sidebar-grid > .main-content {
+    grid-area: main-content;
+    background: #ecf0f1; /* Light gray background for content */
+}
+
+.left-sidebar-grid > .right-sidebar {
+    grid-area: right-sidebar;
+    background: #34495e; /* Darker sidebar color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .left-sidebar-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        grid-template-areas:
+            "left-sidebar"
+            "main-content"
+            "right-sidebar";
+    }
+}

@@ -58,6 +58,10 @@ nav a img {
     margin-right: -0.5rem;
 }
 
+img[src="../img/logo2.png"]{
+    padding-top: 0.4rem;
+}
+
 nav .navbtns {
     list-style-type: none;
     display: flex;
