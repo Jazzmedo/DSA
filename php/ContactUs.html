@@ -40,25 +40,28 @@
             <p>A Journey Of Courage, Healing, And Discovery.
                 Dive Into The Rich Tapestry Of Arabian
                 Culture Through Our Animated Series.</p>
-            <form class="formm" action="get">
-                <div class="inputs">
-                    <label for="name">Name &nbsp;<i class="fa-solid fa-user"></i></label>
-                    <input type="name" placeholder="Enter Your Name">
-                </div>
-                <div class="inputs">
-                    <label for="email">Email &nbsp;<i class="fa-solid fa-envelope"></i></label>
-                    <input type="name" placeholder="Enter Your Email">
-                </div>
-                <div class="inputs">
-                    <label for="phone">Phone &nbsp;<i class="fa-solid fa-phone"></i></label>
-                    <input type="phone" placeholder="Enter Your Phone">
-                </div>
-                <div class="inputs">
-                    <label for="message">Messages &nbsp;<i class="fa-brands fa-telegram"></i></label>
-                    <textarea type="message" placeholder="Enter Your Message"></textarea>
-                </div>
-                <input class="submitt" type="submit" name="Submit" value="Submit&nbsp; &#8594;" id="">
-            </form>
+                <form action="https://formspree.io/f/mvgppkdd" method="POST">
+                    <div class="formm">
+                        <div class="inputs">
+                            <label for="name">Name &nbsp;<i class="fa-solid fa-user"></i></label>
+                            <input type="text" name="name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email &nbsp;<i class="fa-solid fa-envelope"></i></label>
+                            <input type="email" name="email" placeholder="Enter Your Email" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Phone &nbsp;<i class="fa-solid fa-phone"></i></label>
+                            <input type="tel" name="phone" placeholder="Enter Your Phone" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="message">Message &nbsp;<i class="fa-brands fa-telegram"></i></label>
+                            <textarea name="message" placeholder="Enter Your Message" required></textarea>
+                        </div>
+                        <input class="submitt" type="submit" value="Submit&nbsp; &#8594;">
+                    </div>
+                </form>
+                
         </div>
     </div>
     <div class="icontact forcetwo">
