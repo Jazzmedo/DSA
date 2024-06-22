@@ -89,14 +89,11 @@ nav .navbtns li a {
     text-transform: uppercase;
 }
 
-/* img[src="../img/Logo.png"] {
-    margin: 0 -0.5rem 0 0;
+nav .navbtns li a:hover {
+    color: #c5b695;
+    border-bottom: 2px solid #c4c595;
+    
 }
-
-img[src="../img/logo2.png"] {
-    margin: 0 0rem 0 0;
-    padding-top: 0.4rem;
-} */
 
 .welcome {
     background-image: url('../img/contactUswelcome.jpg');
