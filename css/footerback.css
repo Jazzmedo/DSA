@@ -12,6 +12,12 @@ footer {
     margin-bottom: -10%;
 }
 
+.right-one{
+    background-position: left;
+    background-size: 55%;
+    margin-top: -25vh;
+}
+
 footer .foot {
     padding: 6vh 7vw;
     background-color: #065045;
