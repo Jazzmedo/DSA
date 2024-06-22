@@ -749,13 +749,18 @@ nav .navbtns li a {
     color: #666;
 }
 
+.greennn{
+    height: 100%;
+}
+
 .newsletter-form {
     height: inherit;
     display: flex;
     align-items: center;
     background-color: #0b473e;
     border-radius: 50px;
-    width: clamp(19rem, 30%, 28rem);
+    justify-content: space-between;
+    width: clamp(23rem, 30%, 28rem);
 }
 
 .newsletter-form .back-only {
@@ -1281,6 +1286,9 @@ footer .cpyrght {
         font-size: 2.6vw;
     }
 
+    .grid-item img {
+        border-radius: 10px;
+    }
 
     .image-container {
         background-size: 57vw;
@@ -1582,6 +1590,10 @@ footer .cpyrght {
 
     .newsletter-form .back-only {
         height: clamp(12px, 6vh, 9vh);
+    }
+
+    .greennn{
+        width: 100%;
     }
 
     .newsletter-form input[type="email"] {
