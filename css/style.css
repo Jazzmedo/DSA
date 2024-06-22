@@ -355,7 +355,7 @@ footer {
     background-image: url("../img/bglogo.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70% ;
+    background-size: 60% ;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
@@ -376,7 +376,8 @@ footer .foot {
 footer .foot .foot1 {
     display: flex;
     flex-direction: column;
-    margin-right: 20vw;
+    margin-right: 50%;
+    margin-top: -2%
 }
 
 footer .foot .foot1 img {
@@ -602,7 +603,7 @@ footer .cpyrght {
     }
 
     footer {
-        height: 30rem;
+        height: 35vh;
     }
 
     footer .foot {
@@ -664,6 +665,14 @@ footer .cpyrght {
         font-size: 2vw;
     }
 
+    footer .cpyrght {
+        height: 2vh;
+        background-color: #edd9c1;
+        color: black;
+        width: 100%;
+        text-align: center;
+        font-size: 2.2vw;
+    }
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {

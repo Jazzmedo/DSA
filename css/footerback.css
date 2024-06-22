@@ -32,7 +32,8 @@ footer .foot {
 footer .foot .foot1 {
     display: flex;
     flex-direction: column;
-    margin-right: 20vw;
+    margin-right: 50%;
+    margin-top: -2%
 }
 
 footer .foot .foot1 img {
@@ -175,6 +176,14 @@ footer .cpyrght {
         margin-top: -3vh;
     }
 
+    footer .cpyrght {
+        height: 2vh;
+        background-color: #edd9c1;
+        color: black;
+        width: 100%;
+        text-align: center;
+        font-size: 2.2vw;
+    }
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
