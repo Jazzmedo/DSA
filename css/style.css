@@ -355,7 +355,7 @@ footer {
     background-image: url("../img/bglogo.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 60% ;
+    background-size: 55% ;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
@@ -376,7 +376,7 @@ footer .foot {
 footer .foot .foot1 {
     display: flex;
     flex-direction: column;
-    margin-right: 50%;
+    margin-right: 35%;
     margin-top: -2%
 }
 
