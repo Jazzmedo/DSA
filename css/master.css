@@ -660,6 +660,26 @@ nav .navbtns li a {
     }
 }
 
+.boxedd{
+    .con{
+        flex: 0.5;
+        border-radius: 0rem;
+        margin: 0;
+        border-left: 0.3rem solid #065045;
+        border-bottom: 0.3rem solid #065045;
+        border-top: 0.3rem solid #065045;
+    }
+
+    .con.clicked {
+        max-width: unset;
+        flex: 2;
+    }
+    .five{
+        border-right: 0.3rem solid #065045;
+    }
+}
+
+
 .reversed {
     flex-direction: row-reverse;
 }
@@ -730,6 +750,7 @@ nav .navbtns li a {
     position: relative;
     margin: 0 auto 5vh;
     height: 25vh;
+    min-height: 156px;
 }
 
 .newsletter-content {
@@ -760,11 +781,11 @@ nav .navbtns li a {
     background-color: #0b473e;
     border-radius: 50px;
     justify-content: space-between;
-    width: clamp(23rem, 30%, 28rem);
+    width: fit-content;
 }
 
 .newsletter-form .back-only {
-    height: 8vh;
+    height: 30%;
     background-color: #fbf2e6;
     display: flex;
     justify-content: space-between;
@@ -794,6 +815,7 @@ nav .navbtns li a {
     font-size: 1vw;
     transition: background-color 0.3s ease;
     width: clamp(9rem, 26%, 12rem);
+    max-height: 2.8rem;
 }
 
 .newsletter-form button:hover {
