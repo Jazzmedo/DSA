@@ -169,6 +169,12 @@ footer .cpyrght {
         font-size: 2vw;
     }
 
+    .right-one{
+        background-position: center center;
+        background-size: 55%;
+        margin-top: -3vh;
+    }
+
 }
 
 @media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
