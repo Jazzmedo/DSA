@@ -82,11 +82,13 @@ nav .navbtns li {
 }
 
 nav .navbtns li a {
-    color: #c5b695;
+    color: #c5b695d4;
     text-decoration: none;
-    border-bottom: 2px solid #c5b695;
+    border-bottom: 2px solid #c5b69500;
     padding-bottom: 3px;
     text-transform: uppercase;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 500;
 }
 
 nav .navbtns li a:hover {

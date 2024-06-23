@@ -677,9 +677,17 @@ nav .navbtns li a:hover {
         border-top: 0.3rem solid #065045;
     }
 
+    .con h2{
+        left: 65%;
+    }
+
     .con.clicked {
         max-width: unset;
         flex: 2;
+
+        h2{
+            left: 1.9vw;
+        }
     }
     .five{
         border-right: 0.3rem solid #065045;
@@ -989,6 +997,17 @@ footer .cpyrght {
     left: 0;
     top: 0.6rem;
     transform: translateX(-50%);
+}
+
+.timeline-line{
+    height: 100%;
+    width: 0.3rem;
+    position: absolute;
+    left: 0;
+    top: 1.85rem;
+    background-color: #065045;
+    transform: translateX(-50%);
+
 }
 
 .timeline-content {
@@ -1692,6 +1711,17 @@ footer .cpyrght {
         width: 4vw;
         height: 4vw;
         top: 0.5vh;
+    }
+
+    .timeline-line{
+        height: 135%;
+        width: 0.7vw;
+        position: absolute;
+        left: 0;
+        top: 1vh;
+        background-color: #065045;
+        transform: translateX(-50%);
+    
     }
 
     .mission-timeline-content-wrapper {
