@@ -669,6 +669,7 @@ nav .navbtns li a:hover {
 
 .boxedd {
     height: fit-content;
+
     .conn {
         width: 100%;
         height: 80vh;
@@ -681,7 +682,8 @@ nav .navbtns li a:hover {
         border-top: 0.5rem solid #065045;
         border-left: 0.5rem solid #065045;
     }
-    .backblack{
+
+    .backblack {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -689,7 +691,7 @@ nav .navbtns li a:hover {
         transition: background-color 0.3s ease-in-out;
     }
 
-    .backblack1{
+    .backblack1 {
         position: absolute;
         left: 7%;
         width: 86%;
@@ -709,7 +711,7 @@ nav .navbtns li a:hover {
         transform-origin: left bottom;
         opacity: 0%;
     }
-    
+
     .conn h3 {
         position: absolute;
         left: 1.9vw;
@@ -720,7 +722,7 @@ nav .navbtns li a:hover {
         font-weight: 500;
         opacity: 0%;
     }
-    
+
     .conn h4 {
         position: absolute;
         left: 1.9vw;
@@ -731,7 +733,7 @@ nav .navbtns li a:hover {
         font-weight: 500;
         opacity: 0%;
     }
-    
+
     .conn p {
         opacity: 0%;
         position: absolute;
@@ -749,22 +751,22 @@ nav .navbtns li a:hover {
         background-image: url('../img/img1.jpg');
         background-position: 54%;
     }
-    
+
     .twoo {
         background-image: url('../img/img2.png');
         background-position: 52%;
     }
-    
+
     .threee {
         background-image: url('../img/img3.jpeg');
         background-position: 16%;
     }
-    
+
     .fourr {
         background-image: url('../img/img4.jpg');
         background-position: 64%;
     }
-    
+
     .fivee {
         background-image: url('../img/img5.jpg');
         background-position: 80%;
@@ -773,16 +775,19 @@ nav .navbtns li a:hover {
     .conn:hover {
         max-width: unset;
         flex: 1.5;
-        .backblack{
+
+        .backblack {
             background-color: #00000000;
         }
+
         h2,
         h3,
         h4,
         p {
             opacity: 100%;
         }
-        .backblack1{
+
+        .backblack1 {
             box-shadow: 0 0 60px 60px #0000003b;
             background-color: #0000003b;
         }
@@ -827,38 +832,12 @@ nav .navbtns li a:hover {
     }
 }
 
-.logo-subs {
-    width: 90%;
-    height: 43vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin: 0 auto 10vh;
-    background-image: url('../img/bglogo1.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 23%;
-
-}
-
-.dots {
-    height: 30vh;
-    width: 90%;
-    margin: 0 auto 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    background-image: url(../img/Dot.png);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 15%;
-}
-
 .newsletter-container {
+    background-color: #0b473e;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -876,27 +855,28 @@ nav .navbtns li a:hover {
 .newsletter-content h2 {
     margin: 0 0;
     font-size: 24px;
-    color: #1c6c59;
+    color: #ffffff;
 }
 
 .newsletter-content p {
     margin: 5px 0 0;
     font-size: 14px;
-    color: #666;
+    color: #ffffff;
 }
 
 .greennn {
     height: 100%;
+    width: 50%;
+    margin-right: 2vw;
 }
 
 .newsletter-form {
     height: inherit;
     display: flex;
     align-items: center;
-    background-color: #0b473e;
-    border-radius: 50px;
+    border-radius: 2rem;
     justify-content: space-between;
-    width: fit-content;
+    width: 100%;
 }
 
 .newsletter-form .back-only {
@@ -906,7 +886,7 @@ nav .navbtns li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem 1rem 0;
-    border-radius: 3rem;
+    border-radius: 10px;
     width: 100%;
 }
 
@@ -924,13 +904,13 @@ nav .navbtns li a:hover {
     background-color: #1c6c59;
     color: #fff;
     border: none;
-    border-radius: 2vw;
+    border-radius: 10px;
     padding: 0.8rem 1vw;
     cursor: pointer;
     font-size: 1vw;
     transition: background-color 0.3s ease;
-    width: clamp(9rem, 26%, 12rem);
-    max-height: 2.8rem;
+    width: 23%;
+    max-height: 3rem;
 }
 
 .newsletter-form button:hover {
@@ -1711,6 +1691,10 @@ footer .cpyrght {
     .newsletter-container {
         flex-direction: column;
         height: fit-content;
+        width: 100%;
+        margin: 0 0 5vh;
+        border-radius: 0;
+        min-height: unset;
     }
 
     .newsletter-content {
@@ -1737,13 +1721,14 @@ footer .cpyrght {
 
     .newsletter-form {
         max-width: 100%;
-        height: 20vh;
-        width: 60vw;
-        margin: 2vh auto 0;
+        width: 80%;
+        margin: 0vh auto 2vh;
     }
 
     .newsletter-form .back-only {
-        height: 23%;
+        height: 4vh;
+        margin: 0 auto;
+        width:fit-content;
     }
 
     .greennn {
@@ -1756,8 +1741,8 @@ footer .cpyrght {
 
     .newsletter-form input[type="submit"] {
         font-size: 2.3vw;
-        width: clamp(17vw, 25%, 26vw);
-        height: 4vh;
+        width: 30%;
+        height: 3vh;
         padding: 0 1vw;
     }
 
@@ -1837,33 +1822,124 @@ footer .cpyrght {
     }
 
     .boxedd {
-        .conn{
+        .conn {
             height: 25vh;
         }
+
         .conn:hover {
             max-width: unset;
             flex: 1.5;
-            .backblack{
+
+            .backblack {
                 background-color: #00000000;
             }
+
             h2,
             h3,
             h4,
             p {
                 opacity: 100%;
             }
-            .backblack1{
+
+            .backblack1 {
                 box-shadow: 0 0 10vh 10vh #00000047;
                 background-color: #00000047;
             }
-    
+
         }
     }
 }
 
-@media (max-aspect-ratio: 1/1) and (min-aspect-ratio:7.2/10) {
+@media (max-aspect-ratio: 1.1/1) and (min-aspect-ratio:7.2/10) {
 
     nav {
         height: fit-content;
     }
+
+    .newsletter-container {
+        background-color: #0b473e;
+        flex-direction: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: #ffffff; */
+        border-radius: 0px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        position: relative;
+        margin: 0 auto 5vh;
+        height: 25vh;
+        min-height: 156px;
+    }
+    
+    .newsletter-content {
+        margin-left: 2rem;
+        width: 40%;
+    }
+    
+    .newsletter-content h2 {
+        margin: 0 0;
+        font-size: 24px;
+        color: #ffffff;
+    }
+    
+    .newsletter-content p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    
+    .greennn {
+        height: 100%;
+        width: 50%;
+        margin-right: 2vw;
+    }
+    
+    .newsletter-form {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        border-radius: 2rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .newsletter-form .back-only {
+        height: 30%;
+        background-color: #fbf2e6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem 1rem 0;
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .newsletter-form input[type="email"] {
+        border: none;
+        border-radius: 2vw;
+        padding: 0rem 1rem;
+        font-size: 14px;
+        outline: none;
+        flex-grow: 1;
+        background-color: #fbf2e6;
+    }
+    
+    .newsletter-form input[type="submit"] {
+        background-color: #1c6c59;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 0.8rem 1vw;
+        cursor: pointer;
+        font-size: 1vw;
+        transition: background-color 0.3s ease;
+        width: 23%;
+        height: unset;
+    }
+    
+    .newsletter-form button:hover {
+        background-color: #145a48;
+    }
+    
 }
