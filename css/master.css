@@ -202,6 +202,7 @@ nav .navbtns li a:hover {
 }
 
 .image-container {
+    /* animation: rotateAnimation 41s infinite linear; */
     background-image: url("../img/bglogo1.png");
     background-size: 36vw;
     background-repeat: no-repeat;
@@ -212,6 +213,14 @@ nav .navbtns li a:hover {
     width: fit-content;
     height: fit-content;
 }
+/* @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
 
 .image-container img {
     width: 40vw;
@@ -219,6 +228,7 @@ nav .navbtns li a:hover {
     border-radius: 10px;
     padding-left: 15vw;
 }
+
 
 .text-container {
     color: #2b685d;
@@ -275,6 +285,7 @@ nav .navbtns li a:hover {
     align-items: center;
     justify-content: flex-start;
 }
+
 
 .more-content {
     width: 60%;
