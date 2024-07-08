@@ -213,14 +213,6 @@ nav .navbtns li a:hover {
     width: fit-content;
     height: fit-content;
 }
-/* @keyframes rotateAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } */
 
 .image-container img {
     width: 40vw;
