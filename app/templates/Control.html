@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/control.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/Logo.ico') }}">
+    <title>DSA | Control</title>
+</head>
+<body>
+    <div class="left-sidebar-grid">
+        <!-- Sidebar navigation -->
+        <nav class="left-sidebar">
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo">
+            <div>
+                <p><a href="{{ url_for('control') }}"><i class="fa-solid fa-border-all"></i>BLOGS</a></p>
+            </div>
+            <div>
+                <p><a href=""><i class="fa-solid fa-border-all sec"></i>NEWS</a></p>
+            </div>
+        </nav>
+
+        <!-- Main content area for blogs -->
+        <main class="main-content">
+            <div class="mblg">
+                <h3>My Blogs</h3>
+                <div class="addblg">
+                    <h4>Add Blog</h4>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="left-blog">
+                    <div class="blgnum">1</div>
+                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
+                    <div class="blgtxt">
+                        <h3>headline</h3>
+                        <h4>sub title sub title</h4>
+                        <p>first two line first two line first two line first two line</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
+                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="left-blog">
+                    <div class="blgnum">2</div>
+                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
+                    <div class="blgtxt">
+                        <h3>headline</h3>
+                        <h4>sub title sub title</h4>
+                        <p>first two line first two line first two line first two line</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
+                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="left-blog">
+                    <div class="blgnum">3</div>
+                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
+                    <div class="blgtxt">
+                        <h3>headline</h3>
+                        <h4>sub title sub title</h4>
+                        <p>first two line first two line first two line first two line</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
+                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="left-blog">
+                    <div class="blgnum">4</div>
+                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
+                    <div class="blgtxt">
+                        <h3>headline</h3>
+                        <h4>sub title sub title</h4>
+                        <p>first two line first two line first two line first two line</p>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
+                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right sidebar for user information -->
+        <aside class="right-sidebar">
+            <div class="rightdivs hidsa"><h1>HI, DSA!</h1><i class="fa-solid fa-circle-user"></i></div>
+            <div class="rightdivs chars"><i class="fa-solid fa-circle-user"></i><h2>Characters</h2></div>
+            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>NAYERA</h2></div><i class="fa-solid fa-square"></i></div>
+            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-plus"></i><h2>MOHAMED</h2></div><i class="fa-solid fa-square-check"></i></div>
+            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>ALI</h2></div><i class="fa-solid fa-square"></i></div>
+            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>YASER</h2></div><i class="fa-solid fa-square"></i></div>
+            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>EMAD</h2></div><i class="fa-solid fa-square"></i></div>
+        </aside>
+    </div>
+    {{password}}
+</body>
+</html>

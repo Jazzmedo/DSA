@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="../img/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/Logo.ico') }}">
 </head>
-
 <body>
     <nav>
-        <a href="index.html">
-            <img src="../img/Logo.png" alt="">
-            <img src="../img/logo2.png" alt="">
+        <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="">
         </a>
         <ul class="navbtns">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
         </ul>
     </nav>
     <div class="welcome">
         <center class="inners">
             <div class="text-content">
                 <h1>Communicate With DSA</h1>
-                <p>DSA Studios is a distinguished media production company specializing in the creation of immersive and
-                    culturally authentic historical Arabian series.</p>
+                <p>DSA Studios is a distinguished media production company specializing in the creation of immersive and culturally authentic historical Arabian series.</p>
             </div>
-            <div class="mac"><img src="../img/mac.png" alt=""></div>
+            <div class="mac"><img src="{{ url_for('static', filename='img/mac.png') }}" alt=""></div>
         </center>
     </div>
     <div class="icontact">
-        <div class="iphone"><img src="../img/Iphone.png" alt=""></div>
+        <div class="iphone"><img src="{{ url_for('static', filename='img/Iphone.png') }}" alt=""></div>
         <div class="icontent">
             <h1>Have An Idea ?</h1>
             <h2>Tell us about it</h2>
-            <p>A Journey Of Courage, Healing, And Discovery.
-                Dive Into The Rich Tapestry Of Arabian
-                Culture Through Our Animated Series.</p>
+            <p>A Journey Of Courage, Healing, And Discovery. Dive Into The Rich Tapestry Of Arabian Culture Through Our Animated Series.</p>
             <form class="formm" action="https://formspree.io/f/mvgppkdd" method="POST">
                 <div class="inputs">
                     <label for="name">Name &nbsp;<i class="fa-solid fa-user"></i></label>
@@ -65,9 +60,7 @@
         <div class="icontent">
             <h1>We Are Active</h1>
             <h2>Follow us on social media</h2>
-            <p>A Journey Of Courage, Healing, And Discovery.
-                Dive Into The Rich Tapestry Of Arabian
-                Culture Through Our Animated Series.</p>
+            <p>A Journey Of Courage, Healing, And Discovery. Dive Into The Rich Tapestry Of Arabian Culture Through Our Animated Series.</p>
         </div>
         <div class="grid-container">
             <div class="container-one">
@@ -83,21 +76,20 @@
     <footer>
         <div class="foot">
             <div class="foot1">
-                <img src="../img/bglogo.png" alt="">
-                <img src="../img/logo2.png" alt="">
+                <img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="">
             </div>
             <div class="foot2">
                 <h3>COMPANY</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li><a href="ContactUs.html">Contact</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">Contact</a></li>
                 </ul>
             </div>
             <div class="foot2">
                 <h3>CONTACT</h3>
                 <ul>
-                     
                     <li>Support@dsa.org</li>
                 </ul>
             </div>
@@ -115,7 +107,6 @@
             all copyright@ for DSA Production company 2024
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
-
 </html>

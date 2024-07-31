@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/master.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../css/footerback.css" />
-    <link rel="icon" type="image/x-icon" href="../img/Logo.ico" />
-    <title>DSA | About Us</title>
-  </head>
-
-  <body>
-    <nav>
-      <a href="index.html">
-        <img src="../img/Logo.png" alt="Logo" />
-        <img src="../img/logo2.png" alt="Logo 2" />
-      </a>
-      <ul class="navbtns">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutUs.html">About Us</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="welcome">
-      <div class="inners only-content">
-        <div class="text-content mmargin">
-          <h1>DSA</h1>
-          <p>
-            DAAD Studios is a distinguished media production company
-            specializing in the creation of immersive and culturally authentic
-            historical Arabian series.
-          </p>
-          <a href="ContactUs.html" class="contact-button">Contact Us</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footerback.css') }}" />
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/Logo.ico') }}" />
+  <title>DSA | About Us</title>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}">
+      <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo" />
+      <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo 2" />
+    </a>
+    <ul class="navbtns">
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+      <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="welcome">
+    <div class="inners only-content">
+      <div class="text-content mmargin">
+        <h1>DSA</h1>
+        <p>DAAD Studios is a distinguished media production company specializing in the creation of immersive and culturally authentic historical Arabian series.</p>
+        <a href="{{ url_for('contact_us') }}" class="contact-button">Contact Us</a>
       </div>
     </div>
-    <!-- New Headers -->
-    <div class="section-header">
-      <h2>WHO ARE WE</h2>
-      <h4>Let's Talk about DSA Production</h4>
-    </div>
+  </div>
+  <div class="section-header">
+    <h2>WHO ARE WE</h2>
+    <h4>Let's Talk about DSA Production</h4>
+  </div>
     <div class="content-wrapper">
       <div class="bigrid-container">
         <div class="toponly">
@@ -312,19 +303,18 @@
         </div>
       </div>
     </div>
-   
     <footer>
       <div class="foot">
         <div class="foot1">
-          <img src="../img/bglogo.png" alt="" />
-          <img src="../img/logo2.png" alt="" />
+          <img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" />
+          <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="" />
         </div>
         <div class="foot2">
           <h3>COMPANY</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact</a></li>
           </ul>
         </div>
         <div class="foot2">
@@ -336,15 +326,15 @@
         <div class="foot3">
           <h3>SOCIAL MEDIA</h3>
           <div class="social">
-            <a href=""> <i class="fa-brands fa-facebook"></i></a>
-            <a href="x.com"> <i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""> <i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""> <i class="fa-brands fa-instagram"></i></a>
+            <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+            <a href="#"> <i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"> <i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
       <div class="cpyrght">all copyright@ for DSA Production company 2024</div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
-</html>
+  </html>
