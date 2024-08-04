@@ -12,12 +12,23 @@
 </head>
 
 <body>
-    <div class="left-sidebar-grid">
+    <div class="left-sidebar-grid" style="background-color: #faecdc; height: fit-content;">
+        <!-- Sidebar navigation -->
+        <nav class="left-sidebar">
+            <img src="{{url_for('static' , filename='img/Logo.png')}}" alt="Logo">
+            <div>
+                <p><a href="#blog"><i class="fa-solid fa-border-all"></i>BLOGS</a></p>
+            </div>
+            <div>
+                <p><a href="#news"><i class="fa-solid fa-border-all sec"></i>NEWS</a></p>
+            </div>
+        </nav>
         <!-- Main content area for blogs -->
-        <div style="display: flex; flex-direction: column; background-color: #faecdc; height:fit-content;">
+        <div
+            style="display: flex; flex-direction: column; background-color: #faecdc; height:fit-content; margin: 0 auto;">
             <main class="main-content Blogs">
-                <div class="mblg">
-                    <h3>My Blogs</h3>
+                <div class="mblg" id="blog">
+                    <h1>My Blogs</h1>
                 </div>
 
                 <form action="/update" method="POST" enctype="multipart/form-data" class="blog-form">
@@ -70,7 +81,7 @@
                                                 src="{{ url_for('static', filename='img/placeholder.png') }}">
                                             {% endif %}
                                         </div>
-                                        <input type="file" name="image{{ i+1 }}" >
+                                        <input type="file" name="image{{ i+1 }}">
                                         <div class="x-2553">255 X 255</div>
                                     </div>
                                 </div>
@@ -91,8 +102,8 @@
                 </form>
             </main>
             <main class="main-content news">
-                <div class="mblg">
-                    <h3>My News</h3>
+                <div class="mblg" id="news">
+                    <h1>My News</h1>
                 </div>
 
                 <form action="/update" method="POST" enctype="multipart/form-data" class="blog-form">
@@ -152,7 +163,7 @@
                                 {% endfor %}
                             </div>
                             <div class="form-buttons">
-                                <button class="group-button" onclick="cancel()">
+                                <button class="group-button" onsubmit="false" onclick="cancel()">
                                     <div class="frame-child16"></div>
                                     <b class="cancel">Cancel</b>
                                 </button>
@@ -202,10 +213,7 @@
         </aside>
     </div>
     <script defer>
-        function cancel() {
-            let value = confirm('Do you want to cancel changes? There is no return');
-            if (value === true) location.reload()
-        }
+        function cancel() {}
     </script>
 </body>
 

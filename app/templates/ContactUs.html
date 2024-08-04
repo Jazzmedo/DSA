@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/Logo.ico') }}">
 </head>
+
 <body>
     <nav>
         <a href="{{ url_for('home') }}">
@@ -24,17 +26,19 @@
         <center class="inners">
             <div class="text-content">
                 <h1>Communicate With DSA</h1>
-                <p>DSA Studios is a distinguished media production company specializing in the creation of immersive and culturally authentic historical Arabian series.</p>
+                <p>DSA Studios is a distinguished media production company specializing in the creation of immersive and
+                    culturally authentic historical Arabian series.</p>
             </div>
             <div class="mac"><img src="{{ url_for('static', filename='img/mac.png') }}" alt=""></div>
         </center>
     </div>
     <div class="icontact">
+        
         <div class="iphone"><img src="{{ url_for('static', filename='img/Iphone.png') }}" alt=""></div>
         <div class="icontent">
             <h1>Have An Idea ?</h1>
             <h2>Tell us about it</h2>
-            <p>A Journey Of Courage, Healing, And Discovery. Dive Into The Rich Tapestry Of Arabian Culture Through Our Animated Series.</p>
+           
             <form class="formm" action="https://formspree.io/f/mvgppkdd" method="POST">
                 <div class="inputs">
                     <label for="name">Name &nbsp;<i class="fa-solid fa-user"></i></label>
@@ -60,16 +64,28 @@
         <div class="icontent">
             <h1>We Are Active</h1>
             <h2>Follow us on social media</h2>
-            <p>A Journey Of Courage, Healing, And Discovery. Dive Into The Rich Tapestry Of Arabian Culture Through Our Animated Series.</p>
+            
         </div>
         <div class="grid-container">
             <div class="container-one">
-                <div class="grid-item pone"><img src="https://placehold.co/150x150"></div>
-                <div class="grid-item ptwo"><img src="https://placehold.co/100x130"></div>
+                <div class="grid-item pone">
+                    <img src="{{ url_for('static', filename='img/sand.jpg') }}" alt="Logo" />
+
+                </div>
+                <div class="grid-item ptwo">
+                    <img src="{{ url_for('static', filename='img/sand3.jpg') }}" alt="Logo" />
+
+                </div>
             </div>
             <div class="container-two">
-                <div class="grid-item pthree"><img src="https://placehold.co/150x155"></div>
-                <div class="grid-item pfour"><img src="https://placehold.co/150x95"></div>
+                <div class="grid-item pthree">
+                    <img src="{{ url_for('static', filename='img/ww.png') }}" alt="Logo" />
+
+                </div>
+                <div class="grid-item pfour">
+                    <img src="{{ url_for('static', filename='img/sand.png') }}" alt="Logo" />
+
+                </div>
             </div>
         </div>
     </div>
@@ -109,4 +125,5 @@
     </footer>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>

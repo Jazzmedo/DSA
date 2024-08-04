@@ -93,8 +93,8 @@ nav .navbtns li a:hover {
 }
 
 .welcome {
-  background-image: url('../img/mainwelcome.jpg');
-  background-size: cover;
+  background-image: url('../img/hero.jpeg');
+  background-size: contain;
   background-position: center top;
   width: 100%;
   height: fit-content;
@@ -134,9 +134,17 @@ nav .navbtns li a:hover {
 
 
 .welcome .text-content {
+  filter: drop-shadow(5px 5px 4px #000000);
   display: inline-block;
   width: 40vw;
   text-align: left;
+}
+
+.expandImg {
+  border-radius: 15px;
+  margin-top: 2rem;
+  height: 100vh;
+  width: 100%;
 }
 
 .welcome h1,
@@ -414,15 +422,28 @@ nav .navbtns li a:hover {
 }
 
 .grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+
   max-width: 50%;
   display: flex;
   gap: 2vw;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .container-one {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 2.5vw;
   margin-left: 4.5vw;
 }
@@ -431,32 +452,47 @@ nav .navbtns li a:hover {
   flex-direction: column;
   justify-content: flex-end;
   display: flex;
+  justify-content: space-between;
+
   align-items: flex-start;
   gap: 2vw;
 }
 
 .grid-item img {
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .pone {
-  width: 10.2vw;
-  height: 14.4vw;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf2e6;
 }
 
 .ptwo {
-  width: 10.2vw;
-  height: 6.9vw;
+  grid-column: 3 / span 4;
+  grid-row: 3 / span 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf2e6;
 }
 
 .pthree {
-  width: 9.3vw;
-  height: 9vw;
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf2e6;
 }
 
 .pfour {
-  width: 9.3vw;
-  height: 15vw;
+
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf2e6;
 }
 
 .teamtxt {
@@ -485,6 +521,13 @@ nav .navbtns li a:hover {
     align-items: center;
     justify-content: center;
   }
+}
+
+div.icontact.forcetwo.reversed>div.icontent {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .forcetwo {
@@ -881,7 +924,7 @@ nav .navbtns li a:hover {
   z-index: -1;
   top: 0;
   right: 0;
-  transform: translate(50%,-50%);
+  transform: translate(40%, -40%);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/Logo.png");
@@ -895,7 +938,7 @@ nav .navbtns li a:hover {
   z-index: -1;
   bottom: 0;
   left: 0;
-  transform: translate(-50%,70%);
+  transform: translate(-50%, 70%);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/Dot.png");
@@ -1217,6 +1260,10 @@ footer .cpyrght {
 }
 
 .bigrid-container {
+  & * {
+    background-size: cover;
+  }
+
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -1256,6 +1303,7 @@ footer .cpyrght {
 .bigrid-item img {
   border-radius: 1rem;
   width: 100%;
+  height: 100%;
 }
 
 .bigrid-container .bigcontainer-three {
@@ -1757,10 +1805,11 @@ footer .cpyrght {
   .newsletter-container::after {
     display: none;
   }
+
   .newsletter-container::before {
-    height: 5rem  ;
-    width:  5rem ;
-    transform: translate(-50%,-50%);
+    height: 5rem;
+    width: 5rem;
+    transform: translate(-50%, -50%);
   }
 
   .newsletter-content {

