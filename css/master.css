@@ -874,7 +874,6 @@ nav .navbtns li a:hover {
 }
 
 .newsletter-form {
-    height: inherit;
     display: flex;
     align-items: center;
     border-radius: 2rem;
@@ -883,7 +882,6 @@ nav .navbtns li a:hover {
 }
 
 .newsletter-form .back-only {
-    height: 30%;
     background-color: #fbf2e6;
     display: flex;
     justify-content: space-between;
@@ -891,6 +889,7 @@ nav .navbtns li a:hover {
     padding: 1rem 1rem 1rem 0;
     border-radius: 10px;
     width: 100%;
+    box-shadow: 0px 21px 35px 24px rgba(0,0,0,0.16);
 }
 
 .newsletter-form input[type="email"] {

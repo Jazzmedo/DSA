@@ -11,12 +11,12 @@
 </head>
 <body>
   <nav>
-    <a href="{{ url_for('index') }}">
+    <a href="{{ url_for('home') }}">
       <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo" />
       <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo 2" />
     </a>
     <ul class="navbtns">
-      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('about_us') }}">About Us</a></li>
       <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
     </ul>
@@ -312,7 +312,7 @@
         <div class="foot2">
           <h3>COMPANY</h3>
           <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('about_us') }}">About Us</a></li>
             <li><a href="{{ url_for('contact_us') }}">Contact</a></li>
           </ul>

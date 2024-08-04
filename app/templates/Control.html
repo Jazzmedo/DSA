@@ -1,108 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/control.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/Logo.ico') }}">
     <title>DSA | Control</title>
 </head>
+
 <body>
     <div class="left-sidebar-grid">
-        <!-- Sidebar navigation -->
-        <nav class="left-sidebar">
-            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo">
-            <div>
-                <p><a href="{{ url_for('control') }}"><i class="fa-solid fa-border-all"></i>BLOGS</a></p>
-            </div>
-            <div>
-                <p><a href=""><i class="fa-solid fa-border-all sec"></i>NEWS</a></p>
-            </div>
-        </nav>
-
         <!-- Main content area for blogs -->
-        <main class="main-content">
-            <div class="mblg">
-                <h3>My Blogs</h3>
-                <div class="addblg">
-                    <h4>Add Blog</h4>
-                    <i class="fa-solid fa-circle-plus"></i>
+        <div style="display: flex; flex-direction: column; background-color: #faecdc; height:fit-content;">
+            <main class="main-content Blogs">
+                <div class="mblg">
+                    <h3>My Blogs</h3>
                 </div>
-            </div>
-            <div class="blog">
-                <div class="left-blog">
-                    <div class="blgnum">1</div>
-                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
-                    <div class="blgtxt">
-                        <h3>headline</h3>
-                        <h4>sub title sub title</h4>
-                        <p>first two line first two line first two line first two line</p>
-                    </div>
-                </div>
-                <div class="btns">
-                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
-                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="left-blog">
-                    <div class="blgnum">2</div>
-                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
-                    <div class="blgtxt">
-                        <h3>headline</h3>
-                        <h4>sub title sub title</h4>
-                        <p>first two line first two line first two line first two line</p>
-                    </div>
-                </div>
-                <div class="btns">
-                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
-                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="left-blog">
-                    <div class="blgnum">3</div>
-                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
-                    <div class="blgtxt">
-                        <h3>headline</h3>
-                        <h4>sub title sub title</h4>
-                        <p>first two line first two line first two line first two line</p>
-                    </div>
-                </div>
-                <div class="btns">
-                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
-                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
-                </div>
-            </div>
-            <div class="blog">
-                <div class="left-blog">
-                    <div class="blgnum">4</div>
-                    <div class="blgimg"><img src="{{ url_for('static', filename='img/bglogo.png') }}" alt="" srcset=""></div>
-                    <div class="blgtxt">
-                        <h3>headline</h3>
-                        <h4>sub title sub title</h4>
-                        <p>first two line first two line first two line first two line</p>
-                    </div>
-                </div>
-                <div class="btns">
-                    <button class="edt">Edit<i class="fa-solid fa-pen"></i></button>
-                    <button class="dlt">Delete<i class="fa-solid fa-trash"></i></button>
-                </div>
-            </div>
-        </main>
 
+                <form action="/update" method="POST" enctype="multipart/form-data" class="blog-form">
+                    <input type="hidden" name="type" value="blog">
+                    <div class="form-fields">
+                        <div class="title-field">
+                            <b class="title">Title</b>
+                        </div>
+                        <div class="subtitle-field">
+                            <div class="subtitle">&nbsp;</div>
+                            <div class="description-field">
+                                <div class="description">
+                                    <div class="travels-field">
+                                        <div class="travels-field-child"></div>
+                                        <input value="{{ blog.title }}" name="title" class="hakiems-traverls"
+                                            placeholder="Blog Title" type="text">
+                                    </div>
+                                    <div class="description-labels">
+                                        <b class="subtitle1">Subtitle</b>
+                                        <div class="description-values">
+                                            <div class="description-values-child"></div>
+                                            <input value="{{ blog.subtitle }}" name="subtitle" class="hakiems-traverls1"
+                                                placeholder="Blog Subtitle" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="description-labels1">
+                                        <b class="description1">Description</b>
+                                        <textarea name="description" class="description-labels-child"
+                                            placeholder="Blog Description" rows="10"
+                                            cols="43">{{ blog.description }}</textarea>
+                                    </div>
+                                    <b class="media">Media</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-upload">
+                            <div class="image-upload-fields">
+                                {% for i in range(4) %}
+                                <div class="image-upload-labels1">
+                                    <div class="image-no{{ i+1 }}">Image no.{{ i+1 }}</div>
+                                    <div class="rectangle-parent8">
+                                        <div class="frame-child15"></div>
+                                        <div class="icon-filled-add-photo-altern-wrapper">
+                                            {% if blog.images and blog.images[i] %}
+                                            <img class="icon-filled-add-photo-altern3" loading="lazy" alt="Blog Image"
+                                                src="{{ blog.images[i] }}">
+                                            {% else %}
+                                            <img class="icon-filled-add-photo-altern3" loading="lazy"
+                                                alt="Placeholder Image"
+                                                src="{{ url_for('static', filename='img/placeholder.png') }}">
+                                            {% endif %}
+                                        </div>
+                                        <input type="file" name="image{{ i+1 }}" >
+                                        <div class="x-2553">255 X 255</div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="form-buttons">
+                                <button class="group-button" onclick="cancel()">
+                                    <div class="frame-child16"></div>
+                                    <b class="cancel">Cancel</b>
+                                </button>
+                                <button type="submit" class="rectangle-parent9">
+                                    <div class="frame-child17"></div>
+                                    <b class="submit">Submit</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+            <main class="main-content news">
+                <div class="mblg">
+                    <h3>My News</h3>
+                </div>
+
+                <form action="/update" method="POST" enctype="multipart/form-data" class="blog-form">
+                    <input type="hidden" name="type" value="news">
+                    <div class="form-fields">
+                        <div class="title-field">
+                            <b class="title">Title</b>
+                        </div>
+                        <div class="subtitle-field">
+                            <div class="subtitle">&nbsp;</div>
+                            <div class="description-field">
+                                <div class="description">
+                                    <div class="travels-field">
+                                        <div class="travels-field-child"></div>
+                                        <input value="{{ news.title }}" name="title" class="hakiems-traverls"
+                                            placeholder="News Title" type="text">
+                                    </div>
+                                    <div class="description-labels">
+                                        <b class="subtitle1">Subtitle</b>
+                                        <div class="description-values">
+                                            <div class="description-values-child"></div>
+                                            <input value="{{ news.subtitle }}" name="subtitle" class="hakiems-traverls1"
+                                                placeholder="News Subtitle" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="description-labels1">
+                                        <b class="description1">Description</b>
+                                        <textarea name="description" class="description-labels-child"
+                                            placeholder="News Description" rows="10"
+                                            cols="43">{{ news.description }}</textarea>
+                                    </div>
+                                    <b class="media">Media</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-upload">
+                            <div class="image-upload-fields">
+                                {% for i in range(4) %}
+                                <div class="image-upload-labels1">
+                                    <div class="image-no{{ i+1 }}">Image no.{{ i+1 }}</div>
+                                    <div class="rectangle-parent8">
+                                        <div class="frame-child15"></div>
+                                        <div class="icon-filled-add-photo-altern-wrapper">
+                                            {% if news.images and news.images[i] %}
+                                            <img class="icon-filled-add-photo-altern3" loading="lazy" alt="News Image"
+                                                src="{{ news.images[i] }}">
+                                            {% else %}
+                                            <img class="icon-filled-add-photo-altern3" loading="lazy"
+                                                alt="Placeholder Image"
+                                                src="{{ url_for('static', filename='img/placeholder.png') }}">
+                                            {% endif %}
+                                        </div>
+                                        <input type="file" name="image{{ i+1 }}">
+                                        <div class="x-2553">255 X 255</div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="form-buttons">
+                                <button class="group-button" onclick="cancel()">
+                                    <div class="frame-child16"></div>
+                                    <b class="cancel">Cancel</b>
+                                </button>
+                                <button type="submit" class="rectangle-parent9">
+                                    <div class="frame-child17"></div>
+                                    <b class="submit">Submit</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
         <!-- Right sidebar for user information -->
         <aside class="right-sidebar">
-            <div class="rightdivs hidsa"><h1>HI, DSA!</h1><i class="fa-solid fa-circle-user"></i></div>
-            <div class="rightdivs chars"><i class="fa-solid fa-circle-user"></i><h2>Characters</h2></div>
-            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>NAYERA</h2></div><i class="fa-solid fa-square"></i></div>
-            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-plus"></i><h2>MOHAMED</h2></div><i class="fa-solid fa-square-check"></i></div>
-            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>ALI</h2></div><i class="fa-solid fa-square"></i></div>
-            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>YASER</h2></div><i class="fa-solid fa-square"></i></div>
-            <div class="rightdivs user"><div class="inrdiv"><i class="fa-solid fa-user-minus"></i><h2>EMAD</h2></div><i class="fa-solid fa-square"></i></div>
+            <div class="rightdivs hidsa">
+                <h1>HI, DSA!</h1><i class="fa-solid fa-circle-user"></i>
+            </div>
+            <div class="rightdivs chars"><i class="fa-solid fa-circle-user"></i>
+                <h2>Characters</h2>
+            </div>
+            <div class="rightdivs user">
+                <div class="inrdiv"><i class="fa-solid fa-user-minus"></i>
+                    <h2>NAYERA</h2>
+                </div><i class="fa-solid fa-square"></i>
+            </div>
+            <div class="rightdivs user">
+                <div class="inrdiv"><i class="fa-solid fa-user-plus"></i>
+                    <h2>MOHAMED</h2>
+                </div><i class="fa-solid fa-square-check"></i>
+            </div>
+            <div class="rightdivs user">
+                <div class="inrdiv"><i class="fa-solid fa-user-minus"></i>
+                    <h2>ALI</h2>
+                </div><i class="fa-solid fa-square"></i>
+            </div>
+            <div class="rightdivs user">
+                <div class="inrdiv"><i class="fa-solid fa-user-minus"></i>
+                    <h2>YASER</h2>
+                </div><i class="fa-solid fa-square"></i>
+            </div>
+            <div class="rightdivs user">
+                <div class="inrdiv"><i class="fa-solid fa-user-minus"></i>
+                    <h2>EMAD</h2>
+                </div><i class="fa-solid fa-square"></i>
+            </div>
         </aside>
     </div>
-    {{password}}
+    <script defer>
+        function cancel() {
+            let value = confirm('Do you want to cancel changes? There is no return');
+            if (value === true) location.reload()
+        }
+    </script>
 </body>
+
 </html>
